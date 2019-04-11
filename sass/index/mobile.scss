@@ -1,0 +1,17 @@
+@import "../_source.scss";
+
+.Header{
+  background: linear-gradient(to top left,$strongGreen,$middleGreen,$liteGreen);
+
+  &-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  &-hamburger{
+    border: none;
+    background: none;
+  }
+}
