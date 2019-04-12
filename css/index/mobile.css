@@ -22,9 +22,9 @@ body {
 
 .Header {
   background: linear-gradient(to top left, #44883d, #82ad48, #86af49);
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 1.5rem 1.5rem 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -33,8 +33,13 @@ body {
   opacity: 0;
   width: 1.5rem;
   height: 1.3rem;
-  margin-right: -4.5rem;
+  margin: 0 0 0 auto;
   z-index: 1;
+}
+
+.Header-hamburgerIcon {
+  margin-right: 1.5rem;
+  margin-left: -1.5rem;
 }
 
 .Header-hamburger:checked + .Header-hamburgerIcon {
