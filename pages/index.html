@@ -9,10 +9,13 @@
 </head>
 <body>
     <header class="Header">
-        <div class="Header-head">
-            <img src="../src/images/logo.svg" alt="logo">
-            <button class="Header-hamburger"><img src="../src/images/humbuger.svg" alt="switch"></button>
-        </div>
+        <img src="../src/images/logo.svg" alt="logo">
+        <input type="checkbox" class="Header-hamburger"/>
+        <svg class="Header-hamburgerIcon" width="23" height="16" fill="#FEFEFE"  xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd">
+                    <path d="M21.838 6.859H1.149C.515 6.859 0 7.367 0 7.994c0 .626.515 1.135 1.15 1.135h20.688c.632 0 1.15-.509 1.15-1.135
+                    0-.627-.518-1.135-1.15-1.135zM1.15 2.318h20.688c.632 0 1.15-.508 1.15-1.135 0-.626-.518-1.135-1.15-1.135H1.149C.515.048
+                    0 .557 0 1.183c0 .627.515 1.135 1.15 1.135zM21.838 13.67H1.149C.515 13.67 0 14.18 0 14.803c0 .625.515 1.135 1.15 1.135h20.688c.632
+                    0 1.15-.51 1.15-1.135 0-.624-.518-1.135-1.15-1.135z"/></g></svg>
         <ul class="HeaderUL">
             <li><a href="">ЧОМУ НАШ СЕРВIС?</a></li>
             <li><a href="">ПОШИРЕНI ЗАПИТАННЯ</a></li>
@@ -20,14 +23,14 @@
             <li><a href="">КОНТАКТИ</a></li>
             <li><a href="">ПЕРЕВІРИТИ РЕЗУЛЬТАТ ЗАЯВКИ</a></li>
         </ul>
-</header>
-    <main>
-    <article class="ArticleFirst">
         <section class="SFirst SFirst--up">
             <h1 class="SFirst-h1">Кредит готівкою <span class="SFirst-span10minute">вiд 20 хвилин</span></h1>
             <h2 class="SFirst-h2">до <span class="SFirst-span5000">50000 грн</span></h2>
-            <p>Оберiть умови кредитування</p>
+            <p class="SFirst-paragraphChoose">Оберiть умови кредитування</p>
         </section>
+</header>
+    <main>
+    <article class="ArticleFirst">
         <section class="SFirst SFirst--form">
             <form class="SFirstForm">
                 <label class="SFirst-labelCount">Сума кредиту : <input class="SFirst-inputCount" type="text"></label>

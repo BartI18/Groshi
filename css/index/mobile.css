@@ -22,16 +22,62 @@ body {
 
 .Header {
   background: linear-gradient(to top left, #44883d, #82ad48, #86af49);
-}
-
-.Header-head {
+  padding: 1.5rem 1.5rem 0 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem 1rem 0 1rem;
+  flex-wrap: wrap;
 }
 
 .Header-hamburger {
-  border: none;
-  background: none;
+  opacity: 0;
+  width: 1.5rem;
+  height: 1.3rem;
+  margin-right: -4.5rem;
+  z-index: 1;
+}
+
+.Header-hamburger:checked + .Header-hamburgerIcon {
+  fill: #d8f939;
+  opacity: .5;
+}
+
+.Header-hamburger:checked ~ .HeaderUL {
+  display: block;
+}
+
+.HeaderUL {
+  display: none;
+}
+
+.SFirst--up {
+  color: #ffffff;
+}
+
+.SFirst-h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.SFirst-span10minute {
+  display: block;
+  font-family: "Open Sans Bold", serif;
+}
+
+.SFirst-h2 {
+  font-size: 2.5rem;
+  font-family: "Open Sans Bold", serif;
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+.SFirst-span5000 {
+  color: #d8f939;
+}
+
+.SFirst-paragraphChoose {
+  padding: 1.8rem 0;
+  margin: 0;
+  font-size: 1.2rem;
 }
