@@ -20,221 +20,49 @@ body {
   font-family: "Open Sans", serif;
 }
 
-.Header {
-  background: linear-gradient(to top left, #44883d, #82ad48, #86af49);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.Header-icon {
-  padding: 1rem 0 0 1.5rem;
-}
-
-.Header-hamburger {
-  opacity: 0;
-  width: 1.5rem;
-  height: 1.3rem;
-  margin-left: auto;
-  z-index: 1;
-  padding: 1rem 0 1rem;
-}
-
-.Header-hamburgerIcon {
-  margin-right: 1.5rem;
-  margin-left: -1.5rem;
-}
-
-.Header-hamburger:checked + .Header-hamburgerIcon {
-  fill: #d8f939;
-  opacity: .5;
-}
-
-.Header-hamburger:checked ~ .HeaderUL {
-  display: block;
-}
-
-.HeaderUL {
-  display: none;
-  list-style: none;
-  padding: 0;
-  width: 100%;
-}
-
-.HeaderUL-li {
-  font-size: 0.8rem;
-  padding: 0.5rem 0;
-}
-
-.HeaderUL-li--1 {
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-.HeaderUL-li--2 {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-.HeaderUL-li--3 {
-  background-color: rgba(0, 0, 0, 0.06);
-}
-
-.HeaderUL-li--4 {
-  background-color: rgba(0, 0, 0, 0.08);
-}
-
-.HeaderUL-li--5 {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.SFirst {
-  padding-left: 1.5rem;
-}
-
-.SFirst--up {
-  color: #ffffff;
-}
-
-.SFirst-h1 {
-  font-size: 1.6rem;
-  font-weight: normal;
-  margin-bottom: 0;
-}
-
-.SFirst-span10minute {
-  display: block;
-  font-family: "Open Sans Bold", serif;
-}
-
-.SFirst-h2 {
-  font-size: 2.5rem;
-  font-family: "Open Sans Bold", serif;
-  margin: 0.5rem 0;
-  font-weight: normal;
-}
-
-.SFirst-span5000 {
-  color: #d8f939;
-}
-
-.SFirst-paragraphChoose {
-  padding: 1.8rem 0;
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.SFirst-labelCount {
-  font-size: 0.8rem;
-}
-
-.SFirst-inputCount {
-  display: block;
-}
-
-.SFirstForm {
-  padding: 1.5rem 0 3.2rem 0;
-}
-
-.SFirst-inputCount {
-  padding: 0.5rem;
-  font-size: 1.1rem;
-  border: none;
-  border-bottom: 1px #cdcdcd solid;
-}
-
-.SFirst-paragraphMonth {
-  font-size: 0.8rem;
-  padding: 1rem 0 1.2rem 0;
-  margin: 0;
-}
-
-.SFirst-labelMonth {
-  font-size: 1.1rem;
-  opacity: 0.5;
-  padding-left: 1rem;
-  background-image: url("../../src/images/radiobutton-pas.svg");
-  background-repeat: no-repeat;
-}
-
-.SFirst-labelMonth--12 {
-  display: block;
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.SFirst-labelMonth:hover {
-  opacity: 1;
-  background-image: url("../../src/images/radiobutton-act.svg");
-}
-
-.SFirst-inputMonth {
-  opacity: 0;
-}
-
-.SFirst-labelTelNumber {
-  font-size: 0.8rem;
-}
-
-.SFirst-inputTelNumber {
-  padding: 0.5rem;
-  font-size: 1.1rem;
-  border: none;
-  border-bottom: 1px #cdcdcd solid;
-}
-
-.SFirst-parOTPPassword {
-  padding: 1rem 4rem 2.5rem 0;
-  font-size: 0.8rem;
-  margin: 0;
-}
-
-.SFirst-inputSubmit {
+.buttonType {
   border-radius: 3.2px;
   border: none;
   font-size: 0.8rem;
   padding: 0.8rem 0;
+  letter-spacing: 0.9px;
   width: 100%;
+  width: -webkit-fill-available;
   color: #ffffff;
   margin: 0 1rem 0 -0.6rem;
   background-image: linear-gradient(288deg, #44883d, #86af49);
 }
 
-.SFirst-inputSubmit:hover {
+.buttonType:hover {
   background-image: linear-gradient(288deg, #44883d, #74A446);
 }
 
-.SFirst-inputSubmit:active {
+.buttonType:active {
   background-image: linear-gradient(288deg, #44883d, #669C43);
 }
 
-.ArticleHow {
-  background-color: #f9fafc;
-  padding: 2rem 0 0 1.5rem;
+.ArticleReasons {
+  padding-bottom: 2.5rem;
 }
 
-.ArticleHow-h2 {
-  padding: 0 1.5rem 0.5rem 0;
-  margin: 0;
+.ArticleReasons-h2 {
+  color: #152844;
   text-align: center;
   font-weight: normal;
+  padding: 0 1.5rem;
 }
 
-.ArticleHow-quickCash {
+.ArticleReasons-credit {
   font-family: "Open Sans Bold", serif;
-}
-
-.ArticleHow-paragraph {
-  text-align: center;
-  color: #849eb0;
-}
-
-.ArticleHow-imgMoney {
-  width: 100%;
-  padding: 2.5rem 0.5rem 2.5rem 0;
 }
 
 .ArticleReasonsContainer {
   position: relative;
+}
+
+.ArticleReasons-border {
+  padding: 0 1rem 0 1rem;
+  width: 90%;
 }
 
 .ArticleReasons-h3 {
@@ -248,4 +76,262 @@ body {
 .ArticleReasons-quick {
   font-style: italic;
   font-family: "Open Sans Bold", serif;
+}
+
+.ArticleReasons-choose {
+  margin: 0 1rem 0 1rem;
+}
+
+.ArticleReasonsUL {
+  padding: 0;
+  margin: 0;
+}
+
+.ArticleReasonsUL-li {
+  color: #152844;
+  font-size: 0.9rem;
+  padding: 0 1.5rem 1rem 1rem;
+}
+
+.ArticleReasonsUL-li:before {
+  content: url("../../src/images/check.svg");
+  padding-right: 0.5rem;
+}
+
+.ArticleFAQ {
+  padding: 2rem 0 2.5rem 0;
+  background-color: #f9fafc;
+}
+
+.ArticleFAQ-h2 {
+  text-align: center;
+  color: #152844;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.ArticleFAQ-span {
+  font-family: "Open Sans Bold", serif;
+}
+
+.ArticleFAQ-subH2 {
+  line-height: 1.6;
+  text-align: center;
+  color: #849eb0;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+
+.ArticleFAQ-separator {
+  margin: 1.5rem 0.8rem 1.5rem 1rem;
+}
+
+.ArticleFAQ-h3 {
+  color: #152844;
+  padding-left: 1.5rem;
+  margin: 0 0 0.6rem 0;
+}
+
+.ArticleFAQ-p {
+  color: #89a7ba;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  font-size: 0.8rem;
+  padding: 0 1.5rem;
+  margin: 0;
+}
+
+.ArticleFAQ-img {
+  padding-left: 2rem;
+}
+
+.ArticleFAQ-chooseAgreement {
+  text-align: center;
+  display: block;
+  text-decoration-line: none;
+  margin-left: 1rem;
+}
+
+.ArticleQuick {
+  padding-top: 2rem;
+}
+
+.ArticleQuick-h2 {
+  margin: 0 0 1rem 0;
+  color: #152844;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.ArticleQuick-spanH2 {
+  font-family: "Open Sans Bold", serif;
+}
+
+.ArticleQuick-subH2 {
+  padding: 0 1rem 3rem 1rem;
+  margin: 0;
+  color: #849eb0;
+  line-height: 1.6;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.ArticleQuick-h4 {
+  margin: 0;
+  padding: 0 0.5rem 2.5rem 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.26;
+  color: #152844;
+  font-weight: normal;
+}
+
+.ArticleQuick-p {
+  margin: 0;
+  padding: 0 1.2rem;
+  line-height: 1.86;
+  font-size: 0.9rem;
+  color: #152844;
+}
+
+.ArticleQuick-imgMoney {
+  padding: 2rem 1.2rem;
+}
+
+.ArticleQuick-span {
+  color: #82b258;
+  display: block;
+}
+
+.ArticleQuick-chooseAgreement {
+  text-align: center;
+  display: block;
+  text-decoration-line: none;
+  margin: 3rem 1rem 6rem 1rem;
+}
+
+.ArticleStepsSection {
+  position: relative;
+  padding: 1rem 1.2rem 2rem 1.2rem;
+}
+
+.ArticleStepsSection-h3 {
+  color: #142745;
+  font-family: "Open Sans Bold", serif;
+  font-size: 1rem;
+  margin: 0 2rem 0.5rem 0;
+}
+
+.ArticleStepsSection-p {
+  color: #89a7ba;
+  line-height: 1.86;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.ArticleStepsSection-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  padding-right: 1.2rem;
+}
+
+.Footer {
+  background: linear-gradient(to top, #44883d, #82ad48, #86af49);
+}
+
+.Footer-icon {
+  padding: 2rem 0 1.5rem 1rem;
+}
+
+.Footer-h2 {
+  margin: 0;
+  line-height: 1.13;
+  font-size: 1.6rem;
+  padding: 0 1.2rem;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.Footer-p {
+  font-size: 0.8rem;
+  padding: 1.5rem 2rem 3.5rem 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.Footer-span {
+  color: #ffffff;
+}
+
+.Footer-spanBlock {
+  display: block;
+  color: #ffffff;
+}
+
+.FooterUL {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.FooterUL-li {
+  font-size: 0.8rem;
+  padding: 1rem 0 1rem 1.5rem;
+  letter-spacing: 1px;
+}
+
+.FooterUL-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.FooterUL-link--first {
+  color: #d8f939;
+}
+
+.FooterFb {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 1.5rem;
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+.FooterShare-svg {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.FooterShare-svg:hover {
+  fill: #ffffff;
+}
+
+.FooterUL-li--1 {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.FooterUL-li--2 {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.FooterUL-li--3 {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.FooterUL-li--4 {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.FooterUL-li--5 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.FooterUL-li--6 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.FooterUL-li--7 {
+  background-color: rgba(0, 0, 0, 0.14);
 }

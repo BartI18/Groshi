@@ -1,215 +1,47 @@
 @import "../_source.scss";
 
-.Header{
-  background: linear-gradient(to top left,$strongGreen,$middleGreen,$liteGreen);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.buttonType{
+  border-radius: 3.2px;
+  border: none;
+  font-size: 0.8rem;
+  padding: 0.8rem 0;
+  letter-spacing: 0.9px;
+  width: 100%;
+  width: -webkit-fill-available;
+  color: $white;
+  margin: 0 1rem 0 -0.6rem;
+  background-image: linear-gradient(288deg,  $strongGreen, $liteGreen);
 
-  &-icon{
-    padding: 1rem 0 0 1.5rem;
-  }
-
-  &-hamburger{
-    opacity: 0;
-    width: 1.5rem;
-    height: 1.3rem;
-    margin-left: auto;
-    z-index: 1;
-    padding:1rem 0 1rem;
-  }
-
-  &-hamburgerIcon{
-    margin-right: 1.5rem;
-    margin-left: -1.5rem;
-  }
-
-  &-hamburger:checked+&-hamburgerIcon{
-    fill: $activeOrange;
-    opacity: .5;
-  }
-
-  &-hamburger:checked~&UL{
-    display: block;
-  }
-
-  &UL{
-    display: none;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-
-    &-li{
-      font-size: 0.8rem;
-      padding: 0.5rem 0;
-
-    }
-
-  }
-}
-
-@for $i from 1 through 5 {
-  .#{HeaderUL-li--#{$i}}{
-    background-color: rgba(0, 0, 0, $i*0.02);
-  }
-}
-
-.SFirst{
-  padding-left: 1.5rem;
-
-  &--up{
-    color: $white;
-  }
-
-  &-h1{
-    font-size: 1.6rem;
-    font-weight: normal;
-    margin-bottom: 0;
-  }
-
-  &-span10minute{
-    display: block;
-    font-family: "Open Sans Bold", serif;
-  }
-
-  &-h2{
-    font-size: 2.5rem;
-    font-family: "Open Sans Bold", serif;
-    margin: 0.5rem 0;
-    font-weight: normal;
-  }
-
-  &-span5000{
-    color: $activeOrange;
-  }
-
-  &-paragraphChoose{
-    padding: 1.8rem 0;
-    margin: 0;
-    font-size: 1.2rem;
-  }
-
-  &-labelCount{
-    font-size: 0.8rem;
-  }
-
-  &-inputCount{
-    display: block;
-  }
-
-  &Form{
-    padding: 1.5rem 0 3.2rem 0;
-  }
-
-  &-inputCount{
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    border: none;
-    border-bottom: 1px $grey solid;
-  }
-
-  &-inputCount:hover{
-    //border-bottom-color: $activeOrange;
-  }
-
-  &-paragraphMonth{
-    font-size: 0.8rem;
-    padding: 1rem 0 1.2rem 0;
-    margin: 0;
-  }
-
-  &-labelMonth{
-    font-size: 1.1rem;
-    opacity: 0.5;
-    padding-left: 1rem;
-    background-image: url("../../src/images/radiobutton-pas.svg");
-    background-repeat: no-repeat;
-
-    &--12{
-      display: block;
-      margin-top: 1.5rem;
-      margin-bottom: 3rem;
-    }
-  }
-
-  &-labelMonth:hover{
-    opacity: 1;
-    background-image: url("../../src/images/radiobutton-act.svg");
-  }
-
-  &-inputMonth{
-    opacity: 0;
-  }
-
-  &-labelTelNumber{
-    font-size: 0.8rem;
-  }
-
-  &-inputTelNumber{
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    border: none;
-    border-bottom: 1px $grey solid;
-  }
-
-  &-parOTPPassword{
-    padding: 1rem 4rem 2.5rem 0;
-    font-size: 0.8rem;
-    margin: 0;
-  }
-
-  &-inputSubmit{
-    border-radius: 3.2px;
-    border: none;
-    font-size: 0.8rem;
-    padding: 0.8rem 0;
-    width: 100%;
-    color: $white;
-    margin: 0 1rem 0 -0.6rem;
-    background-image: linear-gradient(288deg,  $strongGreen, $liteGreen);
-  }
-
-  &-inputSubmit:hover{
+  &:hover{
     background-image: linear-gradient(288deg, $strongGreen, $hoverGreen);
   }
 
-  &-inputSubmit:active{
+  &:active{
     background-image: linear-gradient(288deg, $strongGreen, $pressedGreen);
-  }
-
-}
-
-.ArticleHow{
-  background-color: #f9fafc;
-  padding: 2rem 0 0 1.5rem;
-
-  &-h2{
-    padding: 0 1.5rem 0.5rem 0;
-    margin: 0;
-    text-align: center;
-    font-weight: normal;
-  }
-
-  &-quickCash{
-    font-family: "Open Sans Bold", serif;
-  }
-
-  &-paragraph{
-    text-align: center;
-    color: $paragraphGrey;
-  }
-
-  &-imgMoney{
-    width:100%;
-    padding: 2.5rem 0.5rem 2.5rem 0;
   }
 }
 
 .ArticleReasons{
+  padding-bottom: 2.5rem;
+
+  &-h2{
+    color: $blackFont;
+    text-align: center;
+    font-weight: normal;
+    padding: 0 1.5rem;
+  }
+
+  &-credit{
+    font-family: "Open Sans Bold", serif;
+  }
 
   &Container{
     position: relative;
+  }
+
+  &-border{
+    padding: 0 1rem 0 1rem;
+    width: 90%;
   }
 
   &-h3{
@@ -224,5 +56,246 @@
     font-style: italic;
     font-family: "Open Sans Bold", serif;
   }
+
+  &-choose{
+    margin: 0 1rem 0 1rem;
+  }
+
+  &UL{
+    padding: 0;
+    margin: 0;
+
+    &-li{
+      color: $blackFont;
+      font-size: 0.9rem;
+      padding:0 1.5rem 1rem 1rem;
+
+      &:before{
+        content: url("../../src/images/check.svg");
+        padding-right: 0.5rem;
+      }
+    }
+  }
 }
+
+.ArticleFAQ{
+  padding: 2rem 0 2.5rem 0;
+  background-color: #f9fafc;
+
+  &-h2{
+    text-align: center;
+    color: $blackFont;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  &-span{
+    font-family: "Open Sans Bold", serif;
+  }
+
+  &-subH2{
+    line-height: 1.6;
+    text-align: center;
+    color: $paragraphGrey;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  &-separator{
+    margin: 1.5rem 0.8rem 1.5rem 1rem;
+  }
+
+  &-h3{
+    color: $blackFont;
+    padding-left: 1.5rem;
+    margin: 0 0 0.6rem 0;
+  }
+
+  &-p{
+    color: $blueGrey;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    font-size: 0.8rem;
+    padding: 0 1.5rem;
+    margin: 0;
+  }
+
+  &-img{
+    padding-left: 2rem;
+  }
+
+  &-chooseAgreement{
+    text-align: center;
+    display: block;
+    text-decoration-line: none;
+    margin-left: 1rem;
+  }
+}
+
+.ArticleQuick{
+  padding-top: 2rem;
+
+  &-h2{
+    margin: 0 0 1rem 0;
+    color: $blackFont;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+
+  &-spanH2{
+    font-family: "Open Sans Bold", serif;
+  }
+
+  &-subH2{
+    padding: 0 1rem 3rem 1rem;
+    margin: 0;
+    color: $paragraphGrey;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  &-h4{
+    margin: 0;
+    padding: 0 0.5rem 2.5rem 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.26;
+    color: $blackFont;
+    font-weight: normal;
+  }
+
+  &-p{
+    margin: 0;
+    padding: 0 1.2rem;
+    line-height: 1.86;
+    font-size: 0.9rem;
+    color: $blackFont;
+  }
+
+  &-imgMoney{
+    padding: 2rem 1.2rem;
+  }
+
+  &-span{
+    color: #82b258;
+    display: block;
+  }
+
+  &-chooseAgreement{
+    text-align: center;
+    display: block;
+    text-decoration-line: none;
+    margin: 3rem 1rem 6rem 1rem;
+  }
+}
+
+.ArticleSteps{
+
+  &Section{
+    position: relative;
+    padding: 1rem 1.2rem 2rem 1.2rem;
+
+    &-h3{
+      color: #142745;
+      font-family: "Open Sans Bold", serif;
+      font-size: 1rem;
+      margin: 0 2rem 0.5rem 0;
+    }
+
+    &-p{
+      color: $blueGrey;
+      line-height: 1.86;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    &-img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      padding-right: 1.2rem;
+    }
+  }
+}
+
+.Footer{
+  background: linear-gradient(to top,$strongGreen,$middleGreen,$liteGreen);
+
+  &-icon{
+    padding: 2rem 0 1.5rem 1rem;
+  }
+
+  &-h2{
+    margin: 0;
+    line-height: 1.13;
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    color: $white;
+    font-weight: normal;
+  }
+
+  &-p{
+    font-size: 0.8rem;
+    padding:  1.5rem 2rem 3.5rem 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+
+  &-span{
+    color: $white;
+  }
+
+  &-spanBlock{
+    display: block;
+    color: $white;
+  }
+
+  &UL{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+
+    &-li{
+      font-size: 0.8rem;
+      padding: 1rem 0 1rem 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    &-link{
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      &--first{
+        color: $activeOrange;
+      }
+    }
+
+  }
+
+  &Fb{
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0 1.5rem;
+    background-color: rgba(0, 0, 0, 0.14);
+  }
+
+  &Share-svg{
+    fill: rgba(255,255,255, 0.8);
+
+    &:hover{
+      fill: $white;
+    }
+  }
+
+}
+
+@for $i from 1 through 7 {
+  .#{FooterUL-li--#{$i}}{
+    background-color: rgba(0, 0, 0, $i*0.02);
+  }
+}
+
 

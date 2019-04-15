@@ -1,0 +1,247 @@
+@import "../_source.scss";
+
+.Header{
+  background: linear-gradient(to top left,$strongGreen,$middleGreen,$liteGreen);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &-icon{
+    padding: 1rem 0 0 1.5rem;
+  }
+
+  &-hamburger{
+    opacity: 0;
+    width: 1.5rem;
+    height: 1.3rem;
+    margin-left: auto;
+    z-index: 1;
+    padding:1rem 0 1rem;
+  }
+
+  &-hamburgerIcon{
+    margin-right: 1.5rem;
+    margin-left: -1.5rem;
+  }
+
+  &-hamburger:checked+&-hamburgerIcon{
+    fill: $activeOrange;
+    opacity: .5;
+  }
+
+  &-hamburger:checked~&UL{
+    display: block;
+  }
+
+  &UL{
+    display: none;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+    &-link{
+      text-decoration: none;
+      color: $white;
+
+      &-first{
+        color: $activeOrange;
+      }
+    }
+
+    &-li{
+      font-size: 0.8rem;
+      padding: 1rem 0 1rem 1.5rem;
+
+    }
+
+  }
+}
+
+@for $i from 1 through 7 {
+  .#{HeaderUL-li--#{$i}}{
+    background-color: rgba(0, 0, 0, $i*0.02);
+  }
+}
+
+.buttonType{
+  border-radius: 3.2px;
+  border: none;
+  font-size: 0.8rem;
+  padding: 0.8rem 0;
+  letter-spacing: 0.9px;
+  width: 100%;
+  width: -webkit-fill-available;
+  color: $white;
+  margin: 0 1rem 0 -0.6rem;
+  background-image: linear-gradient(288deg,  $strongGreen, $liteGreen);
+
+  &:hover{
+    background-image: linear-gradient(288deg, $strongGreen, $hoverGreen);
+  }
+
+  &:active{
+    background-image: linear-gradient(288deg, $strongGreen, $pressedGreen);
+  }
+}
+
+.SFirst{
+  padding-left: 1.5rem;
+
+  &--up{
+    color: $white;
+  }
+
+  &-h1{
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  &-span10minute{
+    display: block;
+    font-family: "Open Sans Bold", serif;
+  }
+
+  &-h2{
+    font-size: 2.5rem;
+    font-family: "Open Sans Bold", serif;
+    margin: 0.5rem 0;
+    font-weight: normal;
+  }
+
+  &-span5000{
+    color: $activeOrange;
+  }
+
+  &-paragraphChoose{
+    padding: 1.8rem 0;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  &-labelCount{
+    font-size: 0.8rem;
+  }
+
+  &-inputCount{
+    display: block;
+  }
+
+  &Form{
+    padding: 1.5rem 0 3.2rem 1.5rem;
+  }
+
+  &-inputCount{
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 1px $grey solid;
+  }
+
+  &-inputCount:hover{
+    //border-bottom-color: $activeOrange;
+  }
+
+  &-paragraphMonth{
+    font-size: 0.8rem;
+    padding: 1rem 0 1.2rem 0;
+    margin: 0;
+  }
+
+  &-labelMonth{
+    font-size: 1.1rem;
+    opacity: 0.5;
+    padding-left: 1rem;
+    background-image: url("../../src/images/radiobutton-pas.svg");
+    background-repeat: no-repeat;
+
+    &--12{
+      display: block;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-labelMonth:hover{
+    opacity: 1;
+    background-image: url("../../src/images/radiobutton-act.svg");
+  }
+
+  &-inputMonth{
+    opacity: 0;
+  }
+
+  &-labelTelNumber{
+    font-size: 0.8rem;
+  }
+
+  &-inputTelNumber{
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+    color: #cacaca;
+    border-bottom: 1px $grey solid;
+  }
+
+  &-parOTPPassword{
+    padding: 1rem 4rem 2.5rem 0;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+}
+
+.ArticleHow{
+  background-color: #f9fafc;
+  padding: 2rem 0 2.5rem 1.5rem;
+
+  &-h2{
+    padding: 0 1.5rem 0.5rem 0;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  &-quickCash{
+    font-family: "Open Sans Bold", serif;
+  }
+
+  &-paragraph{
+    text-align: center;
+    color: $paragraphGrey;
+  }
+
+  &-imgMoney{
+    width:100%;
+    padding: 2.5rem 0 ;
+  }
+
+  &UL{
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+
+    &-lItem{
+      font-size: 0.9rem;
+      color: #152844;
+      font-weight: 300;
+      list-style: none;
+      padding-bottom: 1rem;
+
+      &:before{
+        content: url("../../src/images/oval-2.svg");
+        padding-right: 1rem;
+      }
+    }
+
+    &-span{
+      color: #6aa23a;
+    }
+  }
+
+  &-linkChooseAgreement{
+    text-align: center;
+    display: block;
+    text-decoration-line: none;
+  }
+}
