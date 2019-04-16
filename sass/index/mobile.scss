@@ -1,5 +1,9 @@
 @import "../_source.scss";
 
+body{
+  scroll-behavior: auto;
+}
+
 .buttonType{
   border-radius: 3.2px;
   border: none;
@@ -230,7 +234,7 @@
 
   &-h2{
     margin: 0;
-    line-height: 1.13;
+    line-height: 1.15;
     font-size: 1.6rem;
     padding: 0 1.2rem;
     color: $white;

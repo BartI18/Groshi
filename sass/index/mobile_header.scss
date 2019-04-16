@@ -220,12 +220,12 @@
   &UL{
     padding: 0;
     margin: 0 0 2.5rem 0;
+    list-style: none;
 
     &-lItem{
       font-size: 0.9rem;
       color: #152844;
       font-weight: 300;
-      list-style: none;
       padding-bottom: 1rem;
 
       &:before{
