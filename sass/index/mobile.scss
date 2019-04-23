@@ -57,7 +57,6 @@ body{
   }
 
   &-quick{
-    font-style: italic;
     font-family: "Open Sans Bold", serif;
   }
 
@@ -92,9 +91,10 @@ body{
     font-weight: normal;
     margin: 0;
     font-size: 1.5rem;
+    padding-bottom: 1.2rem;
   }
 
-  &-span{
+  &-question{
     font-family: "Open Sans Bold", serif;
   }
 
@@ -104,19 +104,21 @@ body{
     color: $paragraphGrey;
     font-size: 0.9rem;
     padding: 0 1rem;
+    margin: 0;
   }
 
   &-separator{
-    margin: 1.5rem 0.8rem 1.5rem 1rem;
+    margin: 1.5rem 0 1.5rem -0.5rem;
   }
 
-  &-h3{
+  &-table{
     color: $blackFont;
     padding-left: 1.5rem;
     margin: 0 0 0.6rem 0;
+    font-size: 0.9rem;
   }
 
-  &-p{
+  &-definition{
     color: $blueGrey;
     line-height: 1.6;
     letter-spacing: 0.2px;
@@ -126,14 +128,21 @@ body{
   }
 
   &-img{
-    padding-left: 2rem;
+
+    &--up{
+      padding-left: 1rem;
+    }
+
+    &--down{
+      padding: 0 0 2.5rem 1rem;
+    }
   }
 
   &-chooseAgreement{
     text-align: center;
     display: block;
     text-decoration-line: none;
-    margin-left: 1rem;
+    margin: 0 -0.5rem;
   }
 }
 
@@ -148,7 +157,7 @@ body{
     font-size: 1.5rem;
   }
 
-  &-spanH2{
+  &-markH2{
     font-family: "Open Sans Bold", serif;
   }
 
@@ -182,9 +191,9 @@ body{
     padding: 2rem 1.2rem;
   }
 
-  &-span{
+  &-mark{
     color: #82b258;
-    display: block;
+    background: none;
   }
 
   &-chooseAgreement{
@@ -195,35 +204,192 @@ body{
   }
 }
 
-.ArticleSteps{
+.SectionStepsSection{
+  position: relative;
+  padding: 1rem 1.2rem 2rem 1.2rem;
+
+  &-h3{
+    color: #142745;
+    font-family: "Open Sans Bold", serif;
+    font-size: 1rem;
+    margin: 0 2rem 0.5rem 0;
+  }
+
+  &-p{
+    color: $blueGrey;
+    line-height: 1.86;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  &-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    padding-right: 1.2rem;
+  }
+}
+
+.Passport{
+
+  &Dl{
+    padding-top: 4rem;
+    padding-left: 1.5rem;
+    color: $blackRules;
+    margin: 0;
+
+    &-dt{
+      font-size: 1.1rem;
+
+      &-padding{
+        padding: 1rem 0;
+      }
+    }
+
+    &-dd{
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+
+  &-button{
+    font-family: "Open Sans Bold", serif;
+    color: #454545;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px #d1d1d1 solid;
+    text-align: center;
+
+    &--data{
+      padding: 2rem 0;
+    }
+
+    &--back{
+      padding: 1.2rem 0 1.5rem 0;
+    }
+
+    &--information{
+      padding: 1.2rem 0 1.5rem 0;
+    }
+
+    &--credit{
+      margin-top: 4rem;
+      padding: 1.2rem 0 1.5rem 0;
+      border-top: 1px #d1d1d1 solid;
+    }
+  }
 
   &Section{
-    position: relative;
-    padding: 1rem 1.2rem 2rem 1.2rem;
+    border-bottom: 1px #d1d1d1 solid;
+    background-clip: padding-box;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
 
-    &-h3{
-      color: #142745;
-      font-family: "Open Sans Bold", serif;
-      font-size: 1rem;
-      margin: 0 2rem 0.5rem 0;
+    &-h4{
+      font-size: 0.9rem;
+      color: $blackRules;
+      line-height: 1.6;
+      margin: 0;
+      padding: 1rem 0;
+      border-bottom: 1px #d1d1d1 solid;
     }
 
     &-p{
-      color: $blueGrey;
-      line-height: 1.86;
       font-size: 0.9rem;
       margin: 0;
+      padding: 1rem 0;
+      color: #545454;
     }
 
-    &-img{
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      padding-right: 1.2rem;
+    &--grey{
+      background-color: #fbfbfb;
     }
   }
+
+  &SectionFirst{
+    background-color: #fbfbfb;
+    margin-bottom: 4.5rem;
+
+    &-paragraph{
+      color: $blackRules;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      border-bottom: 1px #d1d1d1 Solid;
+    }
+  }
+
+  &-paragr{
+    margin: 0;
+    padding: 1.2rem 0.5rem 1.2rem 1.5rem;
+    background-clip: padding-box;
+    color: $blackRules;
+    font-size: 0.9rem;
+    border-bottom: 1px #d1d1d1 solid;
+  }
+
+  &-mark{
+    background: none;
+    font-family: "Open Sans Bold", serif;
+  }
+
+  &-labelCheck{
+    font-size: 0.9rem;
+    margin-left: 1rem;
+  }
+
+  &-buttonHideAll{
+    color: $blackRules;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin-bottom: 3.5rem ;
+    padding: 0.8rem 0;
+    border: none;
+  }
+
+  &-buttonContinue{
+    margin: 3.5rem 1rem 5rem 1.5rem;
+  }
+
+  &-errorText{
+    color: #f00;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  &SectionBorrower{
+    padding-left: 1.5rem;
+
+    &-h2{
+      margin: 0;
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #4a4a4a;
+    }
+
+    &-h3{
+      margin: 0;
+      padding-bottom: 1rem;
+      font-size: 1.1rem;
+      font-weight: normal;
+      color: $blackRules;
+    }
+
+    &-p{
+      margin: 0;
+      padding: 0 1rem 0.5rem 0;
+      color: $blackRules;
+      font-size: 0.7rem;
+    }
+  }
+
 }
+
 
 .Footer{
   background: linear-gradient(to top,$strongGreen,$middleGreen,$liteGreen);
@@ -248,13 +414,15 @@ body{
     margin: 0;
   }
 
-  &-span{
+  &-mark{
     color: $white;
+    background: none;
   }
 
-  &-spanBlock{
+  &-markBlock{
     display: block;
     color: $white;
+    background: none;
   }
 
   &UL{

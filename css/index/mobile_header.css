@@ -3,7 +3,6 @@
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans.woff2") format("woff2"), url("../../src/fonts/open-sans.woff") format("woff");
-  /* Modern Browsers */
 }
 
 @font-face {
@@ -11,7 +10,6 @@
   font-style: normal;
   font-weight: 800;
   src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans-bold.woff2") format("woff2"), url("../../src/fonts/open-sans-bold.woff") format("woff");
-  /* Modern Browsers */
 }
 
 body {
@@ -64,43 +62,43 @@ body {
 
 .HeaderUL-link {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
 }
 
 .HeaderUL-link-first {
   color: #d8f939;
 }
 
-.HeaderUL-li {
+.HeaderUL-listItem {
   font-size: 0.8rem;
   padding: 1rem 0 1rem 1.5rem;
 }
 
-.HeaderUL-li--1 {
+.HeaderUL-listItem--1 {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-.HeaderUL-li--2 {
+.HeaderUL-listItem--2 {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-.HeaderUL-li--3 {
+.HeaderUL-listItem--3 {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
-.HeaderUL-li--4 {
+.HeaderUL-listItem--4 {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-.HeaderUL-li--5 {
+.HeaderUL-listItem--5 {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.HeaderUL-li--6 {
+.HeaderUL-listItem--6 {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-.HeaderUL-li--7 {
+.HeaderUL-listItem--7 {
   background-color: rgba(0, 0, 0, 0.14);
 }
 
@@ -112,7 +110,7 @@ body {
   letter-spacing: 0.9px;
   width: 100%;
   width: -webkit-fill-available;
-  color: #ffffff;
+  color: #fff;
   margin: 0 1rem 0 -0.6rem;
   background-image: linear-gradient(288deg, #44883d, #86af49);
 }
@@ -130,7 +128,7 @@ body {
 }
 
 .SFirst--up {
-  color: #ffffff;
+  color: #fff;
 }
 
 .SFirst-h1 {
@@ -139,9 +137,11 @@ body {
   margin-bottom: 0;
 }
 
-.SFirst-span10minute {
+.SFirst-mark10minute {
   display: block;
   font-family: "Open Sans Bold", serif;
+  background: none;
+  color: #fff;
 }
 
 .SFirst-h2 {
@@ -151,8 +151,9 @@ body {
   font-weight: normal;
 }
 
-.SFirst-span5000 {
+.SFirst-mark5000 {
   color: #d8f939;
+  background: none;
 }
 
 .SFirst-paragraphChoose {
@@ -165,8 +166,10 @@ body {
   font-size: 0.8rem;
 }
 
-.SFirst-inputCount {
-  display: block;
+.SFirst-passMark {
+  color: #6aa23a;
+  background: none;
+  font-family: 'Open Sans Bold', serif;
 }
 
 .SFirstForm {
@@ -178,6 +181,14 @@ body {
   font-size: 1.1rem;
   border: none;
   border-bottom: 1px #cdcdcd solid;
+  display: block;
+}
+
+.SFirst-paragraphError {
+  margin: 0;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  color: #e85741;
 }
 
 .SFirst-paragraphMonth {
@@ -217,12 +228,15 @@ body {
   padding: 0.5rem;
   font-size: 1.1rem;
   border: none;
-  color: #cacaca;
   border-bottom: 1px #cdcdcd solid;
 }
 
+.SFirst-inputTelNumber::-webkit-input-placeholder {
+  color: #cacaca;
+}
+
 .SFirst-parOTPPassword {
-  padding: 1rem 4rem 2.5rem 0;
+  padding: 1rem 4rem 2.5rem 1rem;
   font-size: 0.8rem;
   margin: 0;
 }
@@ -271,8 +285,9 @@ body {
   padding-right: 1rem;
 }
 
-.ArticleHowUL-span {
+.ArticleHowUL-mark {
   color: #6aa23a;
+  background: none;
 }
 
 .ArticleHow-linkChooseAgreement {

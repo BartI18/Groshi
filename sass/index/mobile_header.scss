@@ -49,7 +49,7 @@
       }
     }
 
-    &-li{
+    &-listItem{
       font-size: 0.8rem;
       padding: 1rem 0 1rem 1.5rem;
 
@@ -59,7 +59,7 @@
 }
 
 @for $i from 1 through 7 {
-  .#{HeaderUL-li--#{$i}}{
+  .#{HeaderUL-listItem--#{$i}}{
     background-color: rgba(0, 0, 0, $i*0.02);
   }
 }
@@ -98,9 +98,11 @@
     margin-bottom: 0;
   }
 
-  &-span10minute{
+  &-mark10minute{
     display: block;
     font-family: "Open Sans Bold", serif;
+    background: none;
+    color: $white;
   }
 
   &-h2{
@@ -110,8 +112,9 @@
     font-weight: normal;
   }
 
-  &-span5000{
+  &-mark5000{
     color: $activeOrange;
+    background: none;
   }
 
   &-paragraphChoose{
@@ -124,8 +127,10 @@
     font-size: 0.8rem;
   }
 
-  &-inputCount{
-    display: block;
+  &-passMark{
+    color: #6aa23a;
+    background: none;
+    font-family: 'Open Sans Bold', serif;
   }
 
   &Form{
@@ -137,10 +142,18 @@
     font-size: 1.1rem;
     border: none;
     border-bottom: 1px $grey solid;
+    display: block;
   }
 
   &-inputCount:hover{
     //border-bottom-color: $activeOrange;
+  }
+
+  &-paragraphError{
+    margin: 0;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    color: #e85741;
   }
 
   &-paragraphMonth{
@@ -164,9 +177,9 @@
   }
 
   &-labelMonth:hover{
-    opacity: 1;
-    background-image: url("../../src/images/radiobutton-act.svg");
-  }
+     opacity: 1;
+     background-image: url("../../src/images/radiobutton-act.svg");
+   }
 
   &-inputMonth{
     opacity: 0;
@@ -180,12 +193,15 @@
     padding: 0.5rem;
     font-size: 1.1rem;
     border: none;
-    color: #cacaca;
     border-bottom: 1px $grey solid;
+
+    &::-webkit-input-placeholder {
+      color: #cacaca;
+    }
   }
 
   &-parOTPPassword{
-    padding: 1rem 4rem 2.5rem 0;
+    padding: 1rem 4rem 2.5rem 1rem;
     font-size: 0.8rem;
     margin: 0;
   }
@@ -234,8 +250,9 @@
       }
     }
 
-    &-span{
+    &-mark{
       color: #6aa23a;
+      background: none;
     }
   }
 
