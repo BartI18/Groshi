@@ -1,2 +1,42 @@
 @import "../_source.scss";
 
+.Header{
+  display: block;
+
+  &Block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &UL{
+    display: flex;
+    width: auto;
+
+    &-listItem{
+      background: none;
+      font-size: 0.7rem;
+
+      &--7{
+        display: none;
+      }
+    }
+
+    &-link{
+      color: $white;
+
+      &:active{
+        color: $activeOrange;
+      }
+    }
+  }
+
+  &-hamburger{
+    display: none;
+  }
+
+  &-hamburgerIcon{
+    display: none;
+  }
+
+}

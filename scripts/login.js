@@ -1,5 +1,3 @@
-'use strict';
-
 import Rules from './rules.js';
 
 const MINIMAL_VALUE = 1000;
@@ -16,6 +14,7 @@ let submitBtnContinue = document.querySelector(".SFirst-buttonContinue");
 let inputTel = document.querySelector(".SFirst-inputTelNumber");
 let labelTel = document.querySelector(".SFirst-labelTelNumber");
 let paragraphPassword = document.querySelector(".SFirst-parOTPPassword");
+
 submitBtn.disabled = true;
 
 inputAmount.addEventListener("keypress", function (e) {
@@ -24,7 +23,20 @@ inputAmount.addEventListener("keypress", function (e) {
 });
 
 inputAmount.addEventListener("keyup", function (event) {
+    let temp = inputAmount.value;
+    temp = temp.split(" ");
+    temp = temp.join("");
     checkAmount(parseInt(inputAmount.value));
+
+    let tempValue = temp;
+    if (tempValue > 0)
+        if (Math.trunc(tempValue / 1000)) {
+            let integral = Math.trunc(tempValue / 1000);
+            console.log("Temp value: "+ tempValue);
+            tempValue = integral + " " + tempValue%1000;
+        }else tempValue = tempValue % 1000;
+
+    inputAmount.value = tempValue;
 });
 
 inputTel.addEventListener("keypress", function (e) {
@@ -40,14 +52,13 @@ inputTel.addEventListener("keyup", function (e) {
 });
 
 submitBtn.addEventListener("click", function (e) {
-    console.log("click");
     if (submitBtn.innerHTML !== "ПРОДОВЖИТИ") {
         let numberValue = inputTel.value.slice(0, 5) + "XXXXXX" + inputTel.value.slice(10);
         labelTel.innerHTML = `<input class="SFirst-inputPassword SFirst-inputTelNumber" maxlength=\"6\" placeholder=\"SMS пароль\">`;
         paragraphPassword.innerHTML = `На номер <mark class="SFirst-passMark">${numberValue}</mark> був вiдправленний SMS-пароль`;
         submitBtn.innerHTML = "ПРОДОВЖИТИ";
     } else {
-        new Rules().appendData();
+        new Rules();
     }
     e.preventDefault();
 });
@@ -67,4 +78,3 @@ function checkAmount(currentValue) {
             paragraphError.innerHTML = "Сума максимального кредиту становить 50000 грн";
     }
 }
-

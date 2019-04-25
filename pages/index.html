@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Швидкий кредит</title>
     <meta name="Description" content="Бери кредит швидко і без черг.">
+    <link rel="preload" href="../css/index/desktop_header.css" as="style" media="screen and (max-width: 1024px) and (min-width: 426px)">
+    <link rel="preload" href="../css/index/desktop.css" as="style" media="screen and (max-width: 1450px) and (min-width: 426px)">
     <link rel="preload" href="../css/index/mobile_header.css" as="style">
     <link rel="preload" href="../css/index/mobile.css" as="style">
     <link rel="stylesheet" href="../css/index/mobile_header.css">
     <link rel="stylesheet" href="../css/index/mobile.css">
-    <script type="module" src="../scripts/rules.js"></script>
+    <link rel="stylesheet" href="../css/index/desktop_header.css" media="screen and (max-width: 1450px) and (min-width: 426px)">
+    <link rel="stylesheet" href="../css/index/desktop.css" media="screen and (max-width: 1024px) and (min-width: 426px)">
     <script type="module" src="../scripts/login.js"></script>
 </head>
 <body>
     <header class="Header" id="Header">
+        <div class="HeaderBlock">
         <img class="Header-icon" src="../src/images/logo.svg" alt="logo">
         <input type="checkbox" class="Header-hamburger"/>
         <svg class="Header-hamburgerIcon" width="23" height="16" fill="#FEFEFE"  xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd">
@@ -37,6 +41,7 @@
             <li class="HeaderUL-listItem HeaderUL-listItem--7">
                 <a class="HeaderUL-link" href="#">ПЕРЕВІРИТИ РЕЗУЛЬТАТ ЗАЯВКИ</a></li>
         </ul>
+        </div>
         <section class="SFirst SFirst--up">
             <h1 class="SFirst-h1">Кредит готівкою <mark class="SFirst-mark10minute">вiд 20 хвилин</mark></h1>
             <h2 class="SFirst-h2">до <mark class="SFirst-mark5000">50000 грн</mark></h2>
@@ -196,7 +201,7 @@
             <img class="SectionStepsSection-img" src="../src/images/4.svg" alt="Fourth">
         </section>
     </main>
-    <div class="Passport"></div>
+
     <footer class="Footer">
         <img class="Footer-icon" src="../src/images/logo.svg" alt="logo">
         <h2 class="Footer-h2">Ми завжди на зв’язку  з нашими клієнтами</h2>

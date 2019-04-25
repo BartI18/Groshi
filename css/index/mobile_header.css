@@ -20,10 +20,15 @@ body {
 
 .Header {
   background: linear-gradient(to top left, #44883d, #82ad48, #86af49);
+}
+
+.HeaderBlock {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
 .Header-icon {
@@ -134,7 +139,7 @@ body {
 .SFirst-h1 {
   font-size: 1.6rem;
   font-weight: normal;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .SFirst-mark10minute {
@@ -182,6 +187,10 @@ body {
   border: none;
   border-bottom: 1px #cdcdcd solid;
   display: block;
+}
+
+.SFirst-inputCount:focus {
+  outline: none;
 }
 
 .SFirst-paragraphError {
