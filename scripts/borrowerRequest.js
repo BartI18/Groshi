@@ -29,6 +29,7 @@ export default function borrowerRequest (){
         document.querySelector(".Passport-header").textContent = resource.rules_credit;
         document.querySelector(".Passport-step").textContent = resource.step;
         document.querySelector(".Passport-percent").textContent = resource.percent;
+        window.scrollTo(0,0);
 
         buttonContinue.onclick = function () {
             let inputCheck = document.querySelector(".Passport-inputCheck");

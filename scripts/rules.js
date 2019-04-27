@@ -13,10 +13,11 @@ export default function Rules() {
 
         let buttonContinue = document.querySelector(".Passport-buttonContinue");
         let buttonHideAll = document.querySelector(".Passport-buttonHideAll");
+        let buttonProcedure = document.querySelector(".Passport-button--credit");
+        let buttonInformation = document.querySelector(".Passport-button--information");
 
-        buttonHideAll.addEventListener("click", function (e, ef) {
+        buttonHideAll.addEventListener("click", function () {
             let divPassword = document.querySelector(".PassportDiv");
-            console.log(divPassword.style.display);
             if (divPassword.style.display === '') {
                 divPassword.style.display = 'none';
                 buttonHideAll.innerHTML = "Раскрыть всё";
@@ -36,6 +37,21 @@ export default function Rules() {
             } else {
                 errorParagraph.innerHTML = "Согласитесь с условиями";
             }
+        };
+
+        buttonProcedure.onclick = function () {
+            let div = document.querySelector(".PassportProcedure");
+            if (div.style.display === '')
+                div.style.display = 'none';
+            else
+                div.style.display = '';
+        };
+        buttonInformation.onclick = function () {
+            let div = document.querySelector(".PassportInfo");
+            if (div.style.display === '')
+                div.style.display = 'none';
+            else
+                div.style.display = '';
         };
     }
 
@@ -80,58 +96,58 @@ export default function Rules() {
                         <p class="PassportSectionFirst-paragraph">${responseJSON.main_info.graphic_payment}</p>
                 </section>
                 <button class="Passport-button Passport-button--information">${responseJSON.main_info.additionally_info}</button>
-                <section class="PassportSection PassportSection--grey">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.additionally_service}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
-                </section>
-                <section class="PassportSection PassportSection--white">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.notary_s_services}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
-                </section>
-                <section class="PassportSection PassportSection--grey">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.appraiser_services}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
-                </section>
-                <section class="PassportSection PassportSection--white">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.insurer_s_services}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
-                </section>
-                <section class="PassportSection PassportSection--grey">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.general_expenses}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.untimely_repayment}</p>
-                </section>
-                <section class="PassportSection PassportSection--white">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.fine}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.fine_info}</p>
-                </section>
-                <section class="PassportSection PassportSection--grey">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.additionally_service_2}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
-                </section>
-                <section class="PassportSection PassportSection--white">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.interest_rate}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
-                </section>
-                <section class="PassportSection PassportSection--grey">
-                    <h4 class="PassportSection-h4">${responseJSON.main_info.other_payments}</h4>
-                    <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
-                </section>
-                <button class="Passport-button Passport-button--credit">Порядок повернення кредиту</button>
-                <p class="Passport-paragr Passport-paragr--grey">
-                    <strong class="Passport-consumer">${responseJSON.main_info.consumer}</strong>
-                     ${responseJSON.main_info.free_get}</p>
-                <p class="Passport-paragr Passport-paragr--white">
-                    <strong class="Passport-consumer">${responseJSON.main_info.consumer}</strong> відмовитися від договору про споживчий кредит протягом
-                    14 календарних днів у порядку та на умовах, визначених Законом України
-                    &quot;Про споживче кредитування&quot;.</p>
-                <p class="Passport-paragr Passport-paragr--white">Так</p>
-                <p class="Passport-paragr Passport-paragr--grey">
-                    <strong class="Passport-consumer">${responseJSON.main_info.consumer}</strong>достроково повернути споживчий кредит без будь-якої додаткової плати, пов’язаної з
-                    достроковим поверненням. Договором про споживчий кредит може бути встановлений обов’язок повідомлення кредитодавця про намір дострокового повернення
-                    споживчого кредиту з оформленням відповідного документа.</p>
-             <p class="Passport-paragr Passport-paragr--white">Умови договору про споживчий  кредит можуть відрізнятися від інформації, наведеної в цьому Паспорті
-                    споживчого кредиту, та будуть залежати від проведеної кредитодавцем оцінки кредитоспроможності споживача з урахуванням, зокрема, наданої ним інформації
-                    про майновий та сімейний стан, розмір доходів тощо.</p></div>
+                <div class="PassportInfo">
+                    <section class="PassportSection PassportSection--grey">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.additionally_service}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--white">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.notary_s_services}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--grey">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.appraiser_services}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--white">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.insurer_s_services}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--grey">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.general_expenses}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.untimely_repayment}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--white">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.fine}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.fine_info}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--grey">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.additionally_service_2}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--white">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.interest_rate}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
+                    </section>
+                    <section class="PassportSection PassportSection--grey">
+                        <h4 class="PassportSection-h4">${responseJSON.main_info.other_payments}</h4>
+                        <p class="PassportSection-p">${responseJSON.main_info.missing}</p>
+                    </section></div>
+                <button class="Passport-button Passport-button--credit">${responseJSON.main_info.procedure}</button>
+                <div class="PassportProcedure">
+                    <p class="Passport-paragr Passport-paragr--grey">
+                        <strong class="Passport-consumer">${responseJSON.main_info.consumer}</strong>
+                         ${responseJSON.main_info.free_get}</p>
+                    <p class="Passport-paragr Passport-paragr--white">
+                        <strong class="Passport-consumer">${responseJSON.main_info.consumer}</strong>${responseJSON.main_info.cancel}</p>
+                    <p class="Passport-paragr Passport-paragr--white">Так</p>
+                    <p class="Passport-paragr Passport-paragr--grey">
+                        <strong class="Passport-consumer">${responseJSON.main_info.consumer}</strong>достроково повернути споживчий кредит без будь-якої додаткової плати, пов’язаної з
+                        достроковим поверненням. Договором про споживчий кредит може бути встановлений обов’язок повідомлення кредитодавця про намір дострокового повернення
+                        споживчого кредиту з оформленням відповідного документа.</p>
+                    <p class="Passport-paragr Passport-paragr--white">Умови договору про споживчий  кредит можуть відрізнятися від інформації, наведеної в цьому Паспорті
+                        споживчого кредиту, та будуть залежати від проведеної кредитодавцем оцінки кредитоспроможності споживача з урахуванням, зокрема, наданої ним інформації
+                        про майновий та сімейний стан, розмір доходів тощо.</p></div></div>
                 <button class="Passport-buttonHideAll">Свернуть все</button>
                 <label class="Passport-labelCheck">
                     <input class="Passport-inputCheck" type="checkbox">Ознайомився (-лась)  та згоден (-на) </label>
@@ -139,7 +155,7 @@ export default function Rules() {
                 <button class="Passport-buttonContinue buttonType">Продовжити</button>`;
 
         document.body.insertBefore(main,document.body.children[1]);
-
+        window.scrollTo(0,0);
     }
 
 }
