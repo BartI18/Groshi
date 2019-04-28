@@ -17,8 +17,13 @@
     color: #a0a0a0;
   }
 
-  &-bar{
+  &-divBar{
     margin: 1rem 1.5rem 0.5rem;
+  }
+
+  &-bar{
+    margin: 0;
+    width: 20%;
     height: 2px;
     border: none;
     background: #40ff00;
@@ -126,6 +131,46 @@
       border-radius: 27px;
     }
 
+  }
+
+
+  &Email{
+    padding: 0 0 6rem 1.5rem;
+
+    &-specifyYour{
+      margin: 2.5rem 1rem 2rem 0.5rem;
+      line-height: 1.5;
+      font-size: 1.1rem;
+      font-weight: normal;
+      color: #424242;
+    }
+
+    &-emailImg{
+      margin: 0 25% 0 10%;
+      display: block;
+    }
+
+    &-input{
+      margin: 2rem 1.5rem 0.8rem 0;
+      padding: 0.5rem 1rem;
+      width: 90%;
+      width: -webkit-fill-available;
+      border: solid 1px #cbcbcb;
+
+      &::-webkit-input-placeholder{
+        color: #a0a0a0;
+      }
+    }
+
+    &-subscribe{
+      margin: 0 0 3rem 1rem;
+      font-size: 0.8rem;
+      color: $blackRules;
+    }
+
+    &-continueButton{
+
+    }
   }
 
 }

@@ -222,7 +222,7 @@ body {
   margin-bottom: 3rem;
 }
 
-.SFirst-labelMonth:hover {
+.SFirst-labelMonth--active {
   opacity: 1;
   background-image: url("../../src/images/radiobutton-act.svg");
 }

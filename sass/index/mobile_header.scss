@@ -181,12 +181,12 @@
       margin-top: 1.5rem;
       margin-bottom: 3rem;
     }
-  }
 
-  &-labelMonth:hover{
-     opacity: 1;
-     background-image: url("../../src/images/radiobutton-act.svg");
-   }
+    &--active{
+      opacity: 1;
+      background-image: url("../../src/images/radiobutton-act.svg");
+    }
+  }
 
   &-inputMonth{
     opacity: 0;

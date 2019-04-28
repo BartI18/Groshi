@@ -1,10 +1,21 @@
+import EmailSend from './emailSend.js';
+
 export default function success() {
 
     fetch("../json/success.json").then(function (ful) {
         ful.json().then(function (res) {
             repaint(res);
+            setClick();
         })
     });
+
+    function setClick() {
+        let buttonEmail = document.querySelector(".PassportFinal-button--email");
+
+        buttonEmail.onclick = function () {
+            new EmailSend();
+        }
+    }
 
     function repaint(res) {
         let main = document.querySelector(".Passport");
@@ -12,7 +23,8 @@ export default function success() {
         main.querySelector(".Passport-header").textContent = res.header;
         main.querySelector(".Passport-step").textContent = res.step;
         main.querySelector(".Passport-percent").textContent = res.percent;
-        main.style.padding = 0;
+        document.querySelector(".Passport-bar").style.width = "100%";
+        main.style.padding = "0";
         let section = document.createElement("section");
         section.className = "PassportFinal";
         section.innerHTML = `

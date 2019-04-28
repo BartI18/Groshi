@@ -51,17 +51,17 @@
     <main class="Main">
         <form class="SFirstForm">
             <label class="SFirst-labelCount">Сума кредиту :
-                <input class="SFirst-inputCount" type="text" maxlength="5" value="15000"></label>
+                <input class="SFirst-inputCount" type="text" maxlength="6" value="15000"></label>
             <p class="SFirst-paragraphError"></p>
             <p class="SFirst-paragraphMonth">Щомiсячний платiж :</p>
-            <label class="SFirst-labelMonth">
-                <input class="SFirst-inputMonth" type="radio" name="month">24 мicяцi / по
+            <label class="SFirst-labelMonth" id="SFirst-labelMonth24">
+                <input class="SFirst-inputMonth SFirst-inputMonth24" type="radio" name="month">24 мicяцi / по
                 <span class="SFirst-amountMoney" id="SFirst-amountMoney24">xxxxxxx грн</span></label>
-            <label class="SFirst-labelMonth SFirst-labelMonth--12">
-                <input class="SFirst-inputMonth" type="radio" name="month">12 мicяцi / по
+            <label class="SFirst-labelMonth SFirst-labelMonth--12" id="SFirst-labelMonth12">
+                <input class="SFirst-inputMonth SFirst-inputMonth12" type="radio" name="month">12 мicяцi / по
                 <span class="SFirst-amountMoney" id="SFirst-amountMoney12">xxxxxxx грн</span></label>
             <label class="SFirst-labelTelNumber">Ваш фiнансовий номер телефону:
-            <input class="SFirst-inputTelNumber" type="tel" maxlength="13" placeholder="+380"></label>
+            <input class="SFirst-inputTelNumber" type="tel" maxlength="14" placeholder="+380"></label>
             <p class="SFirst-parOTPPassword">На цей номер буде вiдправленний OTP-пароль</p>
             <button class="SFirst-inputSubmit buttonType" type="submit" >ОФОРМИТИ КРЕДИТ</button>
         </form>

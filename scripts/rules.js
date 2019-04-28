@@ -79,7 +79,8 @@ export default function Rules() {
         main.innerHTML =
             `<section><h2 class="Passport-header">${responseJSON.main_info.header}</h2>
              <p class="Passport-step">${responseJSON.main_info.step}</p>
-             <hr class="Passport-bar">
+             <div class="Passport-divBar">
+                <hr class="Passport-bar"></div>
              <p class="Passport-progress">${responseJSON.main_info.progress}
              <strong class="Passport-percent">${responseJSON.main_info.percent}</strong></p></section>
              <dl class="PassportDl">

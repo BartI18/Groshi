@@ -16,8 +16,13 @@
         color: #a0a0a0;
     }
 
-    &-bar{
+    &-divBar{
         margin: 1rem 1.5rem 0.5rem;
+    }
+
+    &-bar{
+        margin: 0;
+        width: 20%;
         height: 2px;
         border: none;
         background: #40ff00;
