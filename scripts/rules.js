@@ -72,7 +72,7 @@ export default function Rules() {
         style_desktop.href = "../css/index/mobile_rules.css";
         document.head.appendChild(style_desktop);
         document.head.appendChild(style_mobile);
-        document.querySelector(".SFirst").remove();
+        document.querySelector(".SFirstContainer").remove();
         document.querySelector(".Main").remove();
 
         main.classList = "Passport";
