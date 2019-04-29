@@ -1,0 +1,48 @@
+@import "../_source.scss";
+
+.ArticleReasons {
+
+  &-h2 {
+    padding: 7rem 0 6rem;
+    font-size: 3rem;
+  }
+
+  &UpContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  &Container {
+    top: -2rem;
+  }
+
+  &-border {
+    width: auto;
+  }
+
+  &-h3 {
+    padding: 5rem 7rem 0 7rem;
+    font-size: 1.5rem;
+  }
+
+  &-choose{
+    margin: 7.5rem auto 9rem auto;
+  }
+
+  &UL {
+    list-style: none;
+
+    &-li {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.ArticleFAQ{
+
+  &-h2{
+    padding: 6.5rem 0 1.5rem;
+    font-size: 3rem;
+  }
+}

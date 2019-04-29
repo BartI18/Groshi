@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/index/mobile_header.css">
     <link rel="stylesheet" href="../css/index/mobile.css">
     <link rel="stylesheet" href="../css/index/desktop_header.css" media="screen and (max-width: 1450px) and (min-width: 426px)">
-    <link rel="stylesheet" href="../css/index/desktop.css" media="screen and (max-width: 1024px) and (min-width: 426px)">
+    <link rel="stylesheet" href="../css/index/desktop.css" media="screen and (max-width: 1450px) and (min-width: 426px)">
     <script type="module" src="../scripts/login.js"></script>
 </head>
 <body>
@@ -42,13 +42,12 @@
                 <a class="HeaderUL-link" href="#">ПЕРЕВІРИТИ РЕЗУЛЬТАТ ЗАЯВКИ</a></li>
         </ul>
         </div>
+        <div class="SFirstContainer">
         <section class="SFirst SFirst--up">
             <h1 class="SFirst-h1">Кредит готівкою <mark class="SFirst-mark10minute">вiд 20 хвилин</mark></h1>
             <h2 class="SFirst-h2">до <mark class="SFirst-mark5000">50000 грн</mark></h2>
             <p class="SFirst-paragraphChoose">Оберiть умови кредитування</p>
         </section>
-</header>
-    <main class="Main">
         <form class="SFirstForm">
             <label class="SFirst-labelCount">Сума кредиту :
                 <input class="SFirst-inputCount" type="text" maxlength="6" value="15000"></label>
@@ -61,24 +60,27 @@
                 <input class="SFirst-inputMonth SFirst-inputMonth12" type="radio" name="month">12 мicяцi / по
                 <span class="SFirst-amountMoney" id="SFirst-amountMoney12">xxxxxxx грн</span></label>
             <label class="SFirst-labelTelNumber">Ваш фiнансовий номер телефону:
-            <input class="SFirst-inputTelNumber" type="tel" maxlength="14" placeholder="+380"></label>
+                <input class="SFirst-inputTelNumber" type="tel" maxlength="14" placeholder="+380"></label>
             <p class="SFirst-parOTPPassword">На цей номер буде вiдправленний OTP-пароль</p>
             <button class="SFirst-inputSubmit buttonType" type="submit" >ОФОРМИТИ КРЕДИТ</button>
-        </form>
+        </form></div>
+</header>
+    <main class="Main">
         <article class="ArticleHow" id="ArticleHow">
             <h2 class="ArticleHow-h2">Як отримати кредит
                 <strong class="ArticleHow-quickCash">“Швидка готівка”</strong></h2>
             <p class="ArticleHow-paragraph">Це дуже просто , а найголовнiше швидко !
                 Дуже зручно що ніяких документів для оформлення не потрібно)</p>
-            <picture class="ArticleHow-pictureMoney">
-                <source srcset="../src/images/money/money768.webp" media="(min-width: 426px) and (max-width:1024px)" type="image/webp">
-                <source srcset="../src/images/money/money768.png" media="(min-width: 426px) and (max-width:1024px)" type="image/jpeg">
-                <source srcset="../src/images/money/money1024.webp" media="(min-width: 1025px)" type="image/webp">
-                <source srcset="../src/images/money/money1024.png" media="(min-width: 1025px)" type="image/jpeg">
+            <div class="ArticleHowDiv">
+                <picture class="ArticleHow-pictureMoney">
+<!--                <source srcset="../src/images/money/money768.webp" media="(min-width: 426px) and (max-width:1024px)" type="image/webp">-->
+<!--                <source srcset="../src/images/money/money768.png" media="(min-width: 426px) and (max-width:1024px)" type="image/jpeg">-->
+<!--                <source srcset="../src/images/money/money1024.webp" media="(min-width: 1025px)" type="image/webp">-->
+<!--                <source srcset="../src/images/money/money1024.png" media="(min-width: 1025px)" type="image/jpeg">-->
                 <source srcset="../src/images/money/money320.webp" type="image/webp">
                 <img class="ArticleHow-imgMoney" src="../src/images/money/money320.png" alt="Sunrise Image">
             </picture>
-            <ul class="ArticleHowUL">
+                <ul class="ArticleHowUL">
                 <li class="ArticleHowUL-lItem"><mark class="ArticleHowUL-mark">Ознайомтесь</mark> з кредитним договором</li>
                 <li class="ArticleHowUL-lItem"><mark class="ArticleHowUL-mark">Оберіть</mark> суму та строк кредиту</li>
                 <li class="ArticleHowUL-lItem">
@@ -86,19 +88,19 @@
                 <li class="ArticleHowUL-lItem">
                     <mark class="ArticleHowUL-mark">На Ваш номер телефону</mark> надійде отп-пароль, внесіть його у необхідне поле</li>
                 <li class="ArticleHowUL-lItem"><mark class="ArticleHowUL-mark">Отримайте Ваші гроші</mark> на картку</li>
-            </ul>
+            </ul></div>
             <a class="ArticleHow-linkChooseAgreement buttonType" href="#Header">Оберiть умови кредитування</a>
         </article>
         <article class="ArticleReasons" id="ArticleReasons">
             <h2 class="ArticleReasons-h2">Чому брати
                 <strong class="ArticleReasons-credit">кредит</strong>
                 треба тут i зараз</h2>
-            <div class="ArticleReasonsContainer">
+            <div class="ArticleReasonsUpContainer">
+            <section class="ArticleReasonsContainer">
                 <img class="ArticleReasons-border" src="../src/images/border.svg" alt="Border">
                 <h3 class="ArticleReasons-h3">Наша мета - щоб Ви
                     <em class="ArticleReasons-quick">швидко та зручно</em>
-                    отримати необхідні кошти на картку</h3>
-            </div>
+                    отримати необхідні кошти на картку</h3></section>
             <ul class="ArticleReasonsUL">
                 <li class="ArticleReasonsUL-li">До 50 000 грн. БЕЗ ЗАСТАВИ</li>
                 <li class="ArticleReasonsUL-li">Мінімальний набір даних</li>
@@ -107,7 +109,7 @@
                 <li class="ArticleReasonsUL-li">Комісія при оплаті в ТСП - 0%</li>
                 <li class="ArticleReasonsUL-li">Погашення рівними частинами (ануїтет)</li>
                 <li class="ArticleReasonsUL-li">Термiн кредитування до 24 місяців з можливістю</li>
-            </ul>
+            </ul></div>
             <button class="ArticleReasons-choose buttonType">Оберiть умови кредитування</button>
         </article>
         <dl class="ArticleFAQ" id="ArticleFAQ">
@@ -119,7 +121,7 @@
                 <img class="ArticleFAQ-separator" src="../src/images/separator.svg" alt=""></dd>
             <dt class="ArticleFAQ-table">Що таке кредит «Швидка готівка» ?</dt>
             <dd class="ArticleFAQ-definition">Це кредит готівкою, який надається шляхом зарахування коштів
-                на кредитну картку або Картку для виплат клієнта.
+                        на кредитну картку або Картку для виплат клієнта.
                 <img class="ArticleFAQ-separator" src="../src/images/separator.svg" alt=""></dd>
             <dt class="ArticleFAQ-table">На який строк оформляється кредит
                 «Швидка готівка» ?</dt>
@@ -144,7 +146,7 @@
                 <img class="ArticleFAQ-separator" src="../src/images/separator.svg" alt="">
                 <img  class="ArticleFAQ-img ArticleFAQ-img--down" src="../src/images/img-ic-2.svg" alt="">
                 <a class="ArticleFAQ-chooseAgreement buttonType" href="#Header">Оберiть умови кредитування</a></dd>
-        </dl>
+            </dl>
         <article class="ArticleQuick">
             <h2 class="ArticleQuick-h2">“Швидкий
                 <strong class="ArticleQuick-markH2">кредит”</strong></h2>

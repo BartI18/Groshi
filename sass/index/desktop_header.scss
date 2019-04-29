@@ -1,5 +1,14 @@
 @import "../_source.scss";
 
+.buttonType{
+  margin: 7rem auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  width: max-content;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 .Header{
   display: block;
 
@@ -40,3 +49,82 @@
   }
 
 }
+
+.SFirst{
+
+  &Container{
+    margin-top: 4rem;
+    padding: 0 0 18rem 7rem;
+    position: relative;
+  }
+
+  &-h1{
+    font-size: 2rem;
+  }
+
+  &-h2{
+    font-size: 3.5rem;
+  }
+
+  &-mark10minute{
+    display: inline;
+  }
+
+  &-paragraphChoose{
+    display: none;
+  }
+
+  &-inputSubmit{
+    margin: 0;
+  }
+
+  &Form{
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    right: 10rem;
+    background: #fff;
+  }
+
+  &-labelTelNumber{
+    display: none;
+  }
+
+  &-parOTPPassword{
+    display: none;
+  }
+
+}
+
+.ArticleHow{
+
+  &-h2{
+    padding-top: 9rem;
+    font-size: 3rem;
+  }
+
+  &-paragraph{
+    font-size: 1.1rem;
+    color: $paragraphGrey;
+  }
+
+  &-imgMoney{
+    width: auto;
+  }
+
+  &Div{
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+  }
+
+  &UL{
+    padding-left: 10%;
+
+    &-lItem{
+      font-size: 1.2rem;
+    }
+  }
+
+}
+
