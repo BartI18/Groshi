@@ -46,3 +46,107 @@
     font-size: 3rem;
   }
 }
+
+.ArticleQuick{
+
+  &-h2{
+    padding: 7rem 0 1.5rem;
+    font-size: 3rem;
+  }
+
+  &-subH2{
+    padding: 0 30%;
+    font-size: 1.1rem;
+  }
+
+  &-h4{
+    font-size: 1.5rem;
+  }
+
+  &-markP{
+    padding-top: 1rem;
+    display: block;
+    background: none;
+  }
+
+  &Container{
+    padding: 0 10%;
+    display: flex;
+  }
+
+  &SubContainer{
+    padding-top: 10rem;
+  }
+
+  &-imgMoney{
+    margin-left: -14rem;
+  }
+
+  &-p--down{
+    display: none;
+  }
+}
+
+.SectionSteps{
+  padding: 5rem 10% 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px,1fr));
+  grid-gap: 5rem;
+  background-color: #f9fafc50;
+}
+
+.Footer{
+  position: relative;
+  padding-left: 7rem;
+
+  &-h2{
+    padding: 3rem 1.2rem 0;
+  }
+
+  &UL{
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 10rem;
+    width: auto;
+
+    &-li{
+      background: none;
+      width: 100px;
+
+      &--7{
+        display: none;
+      }
+    }
+
+    &-link{
+      color: $white;
+
+      &:active{
+        color: $activeOrange;
+      }
+    }
+
+
+  }
+
+  &-markBlock{
+    display: inline;
+  }
+
+  &-p{
+    padding: 1.5rem 0.5rem 0 1.2rem;
+
+    &--down{
+      padding: 0 2rem 3.5rem 1.2rem;
+    }
+  }
+
+  &Fb{
+    padding: 0;
+    position: absolute;
+    bottom: 3rem;
+    right: 10rem;
+    background: none;
+  }
+}

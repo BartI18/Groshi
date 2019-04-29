@@ -187,6 +187,10 @@ body{
     color: $blackFont;
   }
 
+  &-markP{
+    display: none;
+  }
+
   &-imgMoney{
     padding: 2rem 1.2rem;
   }
@@ -251,9 +255,13 @@ body{
 
   &-p{
     font-size: 0.8rem;
-    padding:  1.5rem 2rem 3.5rem 1.2rem;
+    padding: 1.5rem 0.5rem 0 1.2rem;
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
+
+    &--down{
+      padding: 0 2rem 3.5rem 1.2rem;
+    }
   }
 
   &-mark{
