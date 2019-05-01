@@ -250,6 +250,10 @@ body {
   padding-right: 1.2rem;
 }
 
+.ArticleMaxQuick {
+  display: none;
+}
+
 .Footer {
   background: linear-gradient(to top, #44883d, #82ad48, #86af49);
 }

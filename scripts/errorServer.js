@@ -1,24 +1,24 @@
-import Loading from './loading.js';
+import loading from './loading.js';
 
 export default function errorServer() {
 
     fetch("../json/error.json").then(function (ful) {
         ful.json().then(function (res) {
             repaint(res);
-            setEventL();
+            document.querySelector(".PassportFinal-button--retry").onclick = () => loading();
         })
     });
 
     function repaint(res) {
-        let main = document.querySelector(".Passport");
-        main.removeChild(main.children[1]);
-        main.querySelector(".Passport-header").textContent = res.header;
-        main.querySelector(".Passport-step").textContent = res.step;
-        main.querySelector(".Passport-percent").textContent = res.percent;
-        main.style.padding = 0;
-        let section = document.createElement("section");
-        section.className = "PassportFinal";
-        section.innerHTML = `
+        document.querySelector(".Passport").remove();
+        let section = `<main class="Passport Passport--padding0">
+            <section><h2 class="Passport-header">${res.header}</h2>
+             <p class="Passport-step">${res.step}</p>
+             <div class="Passport-divBar">
+                <hr class="Passport-bar Passport-bar--80"></div>
+             <p class="Passport-progress">${res.progress}
+             <strong class="Passport-percent">${res.percent}</strong></p></section>
+        <section class="PassportFinal">
         <h2 class="PassportFinal-h2">${res.wrong}</h2>
         <picture class="PassportFinal-picture">
                 <source srcset="../src/images/error/group_tablet.webp" media="(min-width: 426px) and (max-width:1024px)" type="image/webp">
@@ -31,14 +31,8 @@ export default function errorServer() {
         <div class="PassportFinal-container">
             <div class="PassportFinal-exclamation">!</div>
         <p class="PassportFinal-client">${res.technical_failure}</p></div>
-        <button class="PassportFinal-button PassportFinal-button--retry">${res.Retry}</button>`;
+        <button class="PassportFinal-button PassportFinal-button--retry">${res.Retry}</button></section>`;
 
-        main.appendChild(section);
-    }
-
-    function setEventL() {
-        document.querySelector(".PassportFinal-button--retry").onclick = function () {
-            new Loading();
-        }
+        document.querySelector(".Header").insertAdjacentHTML("afterend", section);
     }
 }
