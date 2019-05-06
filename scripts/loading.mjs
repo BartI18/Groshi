@@ -3,8 +3,8 @@ import errorS from "./errorServer.mjs";
 
 export default function loading(thisArg, argArray) {
 
-    fetch("../json/loading.json").then(function (ful) {
-        ful.json().then( (json) => {
+    fetch("../json/loading.json").then((ful) => {
+        ful.json().then((json) => {
             document.querySelector(".Passport").remove();
             if (!document.querySelector(".confirmation_css")) {
                 document.head.insertAdjacentHTML("beforeend",

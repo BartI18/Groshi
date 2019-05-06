@@ -1,6 +1,6 @@
-export default function email () {
+export default function email() {
 
-    fetch("../json/email.json").then(function (res) {
+    fetch("../json/email.json").then((res) => {
         return res.json().then((res) => {
             document.querySelector(".Passport").remove();
             let main = `<main class="Passport Passport--padding0">
@@ -24,7 +24,7 @@ export default function email () {
 
             document.querySelector(".PassportEmail-continueButton").onclick = () => {
                 document.querySelector(".PassportEmail-subscribe").textContent = "На цей email буде вiдправлен результат";
-                setInterval(() =>location.href = "index.html", 1000);
+                setInterval(() => location.href = "index.html", 1000);
             }
         })
     });

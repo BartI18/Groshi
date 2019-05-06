@@ -2,7 +2,7 @@ import loading from './loading.mjs';
 
 export default function errorServer() {
 
-    fetch("../json/error.json").then(function (ful) {
+    fetch("../json/error.json").then((ful) => {
         ful.json().then((res) => {
             document.querySelector(".Passport").remove();
             let section = `<main class="Passport Passport--padding10">

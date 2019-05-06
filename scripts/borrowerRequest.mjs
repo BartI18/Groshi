@@ -2,7 +2,7 @@ import loading from './loading.mjs'
 
 export default function borrowerRequest() {
 
-    fetch("../json/borrower.json").then(function (res) {
+    fetch("../json/borrower.json").then((res) => {
         res.json().then((res) => {
             document.querySelector(".Passport").remove();
 

@@ -2,7 +2,7 @@ import borrower from './borrowerRequest.mjs';
 
 export default function rules() {
 
-    fetch("../json/rules.json").then(function (ful) {
+    fetch("../json/rules.json").then( (ful) => {
         ful.json().then((resp) => appendData(resp));
     });
 

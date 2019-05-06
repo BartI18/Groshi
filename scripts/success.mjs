@@ -2,7 +2,7 @@ import emailSend from './emailSend.mjs';
 
 export default function success() {
 
-    fetch("../json/success.json").then(function (ful) {
+    fetch("../json/success.json").then((ful) => {
         ful.json().then((res) => {
             document.querySelector(".Passport").remove();
             let section = `<main class="Passport Passport--padding0">
