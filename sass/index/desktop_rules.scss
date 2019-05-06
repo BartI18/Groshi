@@ -1,0 +1,77 @@
+@import "../_source.scss";
+
+.Header{
+
+  &UL{
+    display: none;
+  }
+
+  &Block{
+    padding-left: 10%;
+    justify-content: normal;
+  }
+}
+
+
+.Passport{
+  padding-left: 10%;
+
+  &Main{
+    padding-left: 0;
+  }
+
+  &-divBar{
+    padding-right: 10%;
+  }
+
+  &Iframe{
+    margin: 5% auto;
+    width: -webkit-fill-available;
+    height: 700px;
+    display: block;
+  }
+
+  &-labelCheck{
+    margin: 0;
+  }
+
+  &-errorText{
+    margin: 0;
+  }
+
+  &-buttonContinue{
+    margin: 2% 1rem 5% 0;
+  }
+
+  &Div{
+    display: none;
+  }
+
+  &SectionBorrower {
+    padding: 0 5% 0 0;
+  }
+
+  &-buttonHideAll{
+    display: none;
+  }
+
+  &Final{
+    position: relative;
+    padding-bottom: 10%;
+
+    &-checkImg{
+      position: absolute;
+      top: -5%;
+      right: 10%;
+    }
+
+    &-container{
+      width: 40%;
+    }
+
+  }
+}
+
+.FooterUL{
+  display: none;
+}

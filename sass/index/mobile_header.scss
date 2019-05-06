@@ -64,7 +64,7 @@
 }
 
 @for $i from 1 through 7 {
-  .#{HeaderUL-listItem--#{$i}}{
+  .HeaderUL-listItem:nth-child(#{$i}) {
     background-color: rgba(0, 0, 0, $i*0.02);
   }
 }

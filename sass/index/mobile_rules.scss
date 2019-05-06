@@ -2,22 +2,30 @@
 
 .Passport{
 
+    &Main{
+        padding-left: 1.5rem;
+    }
+
+    &Iframe{
+        display: none;
+    }
+
     &-header{
         margin: 0;
-        padding: 1.5rem 0 0 1.5rem;
+        padding-top: 1.5rem;
         font-size: 1.1rem;
         font-weight: normal;
     }
 
     &-step{
         margin: 0;
-        padding: 0.5rem 0 0 1.5rem;
+        padding-top: 0.5rem;
         font-size: 0.8rem;
         color: #a0a0a0;
     }
 
     &-divBar{
-        margin: 1rem 1.5rem 0.5rem;
+        margin: 1rem 0.5rem 1rem 0;
     }
 
     &-bar{
@@ -49,14 +57,12 @@
     }
 
     &-progress{
-        padding-left: 1.5rem;
         font-size: 0.8rem;
         color: #a0a0a0;
     }
 
     &Dl{
         padding-top: 2rem;
-        padding-left: 1.5rem;
         color: $blackRules;
         margin: 0;
 
@@ -164,6 +170,7 @@
     &-buttonHideAll{
         color: $blackRules;
         width: 100%;
+        display: block;
         background-color: #f0f0f0;
         margin-bottom: 3.5rem ;
         padding: 0.8rem 0;

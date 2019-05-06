@@ -1,0 +1,46 @@
+@import "../source.scss";
+
+.buttonType{
+  margin: 5% auto;
+  padding: 0.8rem 1rem;
+  width: max-content;
+  display: block;
+}
+
+.ArticleHow{
+
+  &Div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.ArticleFAQ{
+
+  &-separator{
+    display: none;
+  }
+
+  &-definition{
+    padding: 0 1.5rem 1rem;
+  }
+}
+
+.SFirst{
+  &Container{
+    padding: 0 15%;
+  }
+
+  &-inputTelNumber{
+    display: block;
+  }
+
+  &-inputSubmit{
+    width: 90%;
+    width: -webkit-fill-available;
+    margin: 5% 1.5rem 5% 0;
+  }
+}
+

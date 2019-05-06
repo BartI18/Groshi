@@ -154,11 +154,11 @@ body {
   padding: 0 0 2.5rem 1rem;
 }
 
-.ArticleFAQ-chooseAgreement {
+.ArticleFAQ-chooseAgreements {
   text-align: center;
   display: block;
   text-decoration-line: none;
-  margin: 0 -0.5rem;
+  margin: 0 1rem;
 }
 
 .ArticleQuick {

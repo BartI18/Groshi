@@ -1,11 +1,9 @@
-import borrower from './borrowerRequest.js';
+import borrower from './borrowerRequest.mjs';
 
 export default function rules() {
 
     fetch("../json/rules.json").then(function (ful) {
-        ful.json().then(function (resp) {
-            appendData(resp);
-        })
+        ful.json().then((resp) => appendData(resp));
     });
 
     function appendData(responseJSON) {
@@ -51,22 +49,16 @@ export default function rules() {
      * @param responseJSON json text from server
      */
     function repaint(responseJSON) {
-        let style_mobile = document.createElement("link");
-        let style_desktop = document.createElement("link");
+        document.head.insertAdjacentHTML("beforeend",`<link rel="stylesheet" href="../css/index/mobile_rules.css">`);
+        document.head.insertAdjacentHTML("beforeend", `<link rel="stylesheet" 
+            media="screen and (max-width: 1920px) and (min-width: 426px)" href="../css/index/desktop_rules.css">`);
 
-        style_mobile.rel = "stylesheet";
-        style_mobile.href = "../css/index/mobile_rules.css";
-
-        style_desktop.rel = "stylesheet";
-        style_desktop.media = "screen and (max-width: 1024px) and (min-width: 426px)";
-        style_desktop.href = "../css/index/mobile_rules.css";
-        document.head.appendChild(style_desktop);
-        document.head.appendChild(style_mobile);
         document.querySelector(".SFirstContainer").remove();
         document.querySelector(".Main").remove();
 
         let main = `<main class="Passport">
-                <section class="PassportMain"><h2 class="Passport-header">${responseJSON.main_info.header}</h2>
+                <section class="PassportMain">
+                <h2 class="Passport-header">${responseJSON.main_info.header}</h2>
                     <p class="Passport-step">${responseJSON.main_info.step}</p>
                 <div class="Passport-divBar">
                     <hr class="Passport-bar Passport-bar--40"></div>
@@ -77,7 +69,8 @@ export default function rules() {
                         <dd class="PassportDl-dd">${responseJSON.dl.information_about}</dd>
                         <dt class="PassportDl-dt PassportDl-dt-padding">${responseJSON.dl.agreement}</dt>
                         <dd class="PassportDl-dd PassportDl-dd--information">${responseJSON.dl.information_client}</dd>
-                    </dl>
+                    </dl></section>
+                    <iframe class="PassportIframe" src=${responseJSON.main_info.hrefPDF}></iframe>
                    <div class="PassportDiv">
                         <button class="Passport-button Passport-button--data">${responseJSON.main_info.description}</button>
                         <button class="Passport-button Passport-button--back">${responseJSON.main_info.back_credit}</button>
@@ -138,7 +131,7 @@ export default function rules() {
                         <p class="Passport-paragr Passport-paragr--white">Умови договору про споживчий  кредит можуть відрізнятися від інформації, наведеної в цьому Паспорті
                             споживчого кредиту, та будуть залежати від проведеної кредитодавцем оцінки кредитоспроможності споживача з урахуванням, зокрема, наданої ним інформації
                             про майновий та сімейний стан, розмір доходів тощо.</p></div></div>
-                        <button class="Passport-buttonHideAll">Свернуть все</button> </section>
+                        <button class="Passport-buttonHideAll">Свернуть все</button> 
                         <label class="Passport-labelCheck">
                         <input class="Passport-inputCheck" type="checkbox">Ознайомився (-лась)  та згоден (-на) </label>
                         <p class="Passport-errorText"></p>

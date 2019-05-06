@@ -9,13 +9,16 @@
   text-transform: uppercase;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .Header{
   display: block;
 
   &Block{
-    display: flex;
+    flex-wrap: nowrap;
     justify-content: space-around;
-    align-items: center;
   }
 
   &UL{
@@ -23,10 +26,10 @@
     width: auto;
 
     &-listItem{
-      background: none;
+      background: none !important;
       font-size: 0.7rem;
 
-      &--7{
+      &--removed{
         display: none;
       }
     }
@@ -53,8 +56,8 @@
 .SFirst{
 
   &Container{
-    margin-top: 4rem;
-    padding: 0 0 18rem 7rem;
+    margin-top: 5%;
+    padding: 0 0 25% 7rem;
     position: relative;
   }
 
@@ -78,8 +81,12 @@
     margin: 0;
   }
 
+  &-labelMonth--12{
+    margin-bottom: 1.5rem;
+  }
+
   &Form{
-    padding: 3rem;
+    padding: 2rem;
     position: absolute;
     top: 0;
     right: 10rem;
@@ -87,11 +94,16 @@
   }
 
   &-labelTelNumber{
-    display: none;
+    margin-bottom: 1.5rem;
+  }
+
+  &-inputTelNumber{
+    display: block;
   }
 
   &-parOTPPassword{
-    display: none;
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    width: 200px;
   }
 
 }

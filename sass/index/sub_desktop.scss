@@ -1,0 +1,29 @@
+@import "../_source.scss";
+
+.SFirstContainer{
+  padding: 0 0 30% 1rem;
+}
+
+.SFirst{
+
+  &Form{
+    right: 1rem;
+  }
+}
+
+.SectionSteps{
+  padding: 5rem 1rem;
+  grid-gap: 3rem;
+}
+
+.Footer{
+  padding-left: 1rem;
+
+  &UL{
+    right: 1rem;
+  }
+
+  &Fb{
+    right: 1rem;
+  }
+}
