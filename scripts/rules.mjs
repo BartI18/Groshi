@@ -17,11 +17,11 @@ export default function rules() {
 
         buttonHideAll.onclick = () => {
             let divPassword = document.querySelector(".PassportDiv");
-            if (!divPassword.style.display) {
-                divPassword.style.display = 'none';
+            if (!divPassword.classList.contains("Passport-hide")) {
+                divPassword.classList.add("Passport-hide");
                 buttonHideAll.textContent = "Раскрыть всё";
             } else {
-                divPassword.style.display = '';
+                divPassword.classList.remove("Passport-hide");
                 buttonHideAll.textContent = "Свернуть всё";
             }
         };
@@ -38,10 +38,10 @@ export default function rules() {
 
     function onClick(name) {
         let div = document.querySelector(name);
-        if (div.style.display)
-            div.style.display = '';
+        if (div.classList.contains("Passport-hide"))
+            div.classList.remove("Passport-hide");
         else
-            div.style.display = 'none';
+            div.classList.add("Passport-hide");
     }
 
     /**
