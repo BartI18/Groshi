@@ -1,7 +1,7 @@
 import success from "./success.mjs";
 import errorS from "./errorServer.mjs";
 
-export default function loading(thisArg, argArray) {
+export default function loading() {
 
     fetch("../json/loading.json").then((ful) => {
         ful.json().then((json) => {
