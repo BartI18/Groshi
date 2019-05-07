@@ -69,8 +69,8 @@ inputTel.onkeyup = (e) => {
     if (tempValue.length >= 6)
         tempValue.splice(5, 0, " ");
     inputTel.value = "+" + tempValue.join("");
-    (+inputTel.value.length !== 14) ?
-        submitBtn.setAttribute("disabled", `true`) : submitBtn.removeAttribute("disabled");
+    (+inputTel.value.length !== Const.LENGTH_PHONE_NUMBER) ?
+        submitBtn.setAttribute("disabled", "true") : submitBtn.removeAttribute("disabled");
 };
 
 submitBtn.onclick = (e) => {
@@ -83,8 +83,8 @@ submitBtn.onclick = (e) => {
             submitBtn.removeAttribute("disabled");
         }
     } else {
-        if (document.querySelector(".SFirst-inputPassword").value.length !== Const.LengthPass)
-            setValue('Неверная длинна пароля','#f00');
+        if (document.querySelector(".SFirst-inputPassword").value.length !== Const.LENGTH_PASS)
+            setTextColorMsg('Неверная длинна пароля','#f00');
         else
             rules();
     }
@@ -104,8 +104,8 @@ check24.onchange = checked24Btn;
 function checkAmount(currentValue) {
     if (currentValue >= Const.MINIMAL_VALUE && currentValue <= Const.MAX_VALUE) {
         paragraphError.innerHTML = null;
-        span24.textContent = `${(currentValue * Const.KOEF_24 / 24).toFixed(2)} грн`;
-        span12.textContent = `${(currentValue * Const.KOEF_12 / 12).toFixed(2)} грн`;
+        span24.textContent = `${(currentValue * Const.KOEF_24 / Const.MONTHS_24).toFixed(2)} грн`;
+        span12.textContent = `${(currentValue * Const.KOEF_12 / Const.MONTHS_12).toFixed(2)} грн`;
         submitBtn.removeAttribute("disabled");
         isValidAmount = true;
     } else {
@@ -118,7 +118,7 @@ function checkAmount(currentValue) {
     }
 }
 
-function setValue(text, color) {
+function setTextColorMsg(text, color) {
     let infoText = document.querySelector(".SFirst-parOTPPassword");
     infoText.textContent = text;
     infoText.style.color = color;
@@ -133,6 +133,7 @@ function setAttributeText(phoneNumber) {
     let isValid = !(phoneNumber.length < 12 || phoneNumber.slice(0, 3) !== "380" || Number.isNaN(phoneNumber));
     (isValid) ? submitBtn.setAttribute("disabled", "true") : submitBtn.removeAttribute("disabled");
 
-    (isValid) ? setValue("На цей номер буде вiдправленний OTP-пароль", "#000") : setValue("Невірний формат номера", "#f00");
+    (isValid) ? setTextColorMsg("На цей номер буде вiдправленний OTP-пароль", "#000") :
+        setTextColorMsg("Невірний формат номера", "#f00");
     return isValid;
 }

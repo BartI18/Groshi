@@ -21,7 +21,7 @@ export default function loading(thisArg, argArray) {
                         <hr class="Passport-bar Passport-bar--80"></div>
                      <p class="Passport-progress">${json.progress}
                      <strong class="Passport-percent">${json.percent}</strong></p></section>
-                        <svg class="Passport-spinner" viewBox="0 0 50 50">
+                        <svg class="Passport-spinner">
                             <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
                         </svg></main>`;
             document.querySelector(".Header").insertAdjacentHTML("afterend", main);

@@ -7,6 +7,17 @@
   display: block;
 }
 
+.Header{
+
+  &-link{
+    margin-left: 10%;
+  }
+
+  &-icon{
+    padding-left: 0;
+  }
+}
+
 .ArticleHow{
 
   &Div{
@@ -26,6 +37,27 @@
   &-definition{
     padding: 0 1.5rem 1rem;
   }
+}
+
+.ArticleQuick{
+
+  &-pictureMoney{
+    display: flex;
+    justify-content: center;
+  }
+
+  &-imgMoney{
+    padding: 5% 0;
+  }
+}
+
+.SectionStepsSection{
+  padding: 1rem 1.2rem 10% 1.2rem;
+}
+
+.Passport{
+  padding-bottom: 20%;
+
 }
 
 .SFirst{

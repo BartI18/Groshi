@@ -1,68 +1,82 @@
 @import "../_source.scss";
 
-.Passport{
+.Passport {
 
-  &-spinner{
+  &-spinner {
     top: 40%;
   }
 
-  &--padding10{
+  @media screen and (max-width: 1024px) and (min-width: 426px) {
+    padding-left: 0;
+
+    &Main {
+      padding-left: 10%;
+    }
+
+    &-spinner {
+      margin: 5% auto;
+      display: flex;
+      position: static;
+    }
+  }
+
+  &--padding10 {
     padding-bottom: 10%;
   }
 
-  &Final{
+  &Final {
 
-    &-client{
+    &-client {
       margin: 5% 0 5% 3rem;
     }
 
-    &-h2{
+    &-h2 {
       padding: 1% 0 0;
     }
 
-    &-contract{
+    &-contract {
       margin-left: 0;
     }
 
-    &-button{
+    &-button {
       margin: 0 0 1rem;
     }
 
-    &-exclamation{
+    &-exclamation {
       left: 0;
     }
 
-    &-client{
+    &-client {
       margin-left: 3rem;
     }
   }
 
-  &Email{
+  &Email {
     padding-left: 0;
     position: relative;
 
-    &-emailImg{
+    &-emailImg {
       margin: 0;
       position: absolute;
       top: 0;
       right: 10%;
     }
 
-    &-input{
+    &-input {
       margin: 0 0 1% 0;
       width: auto;
     }
 
-    &-subscribe{
+    &-subscribe {
       margin-left: 0;
     }
 
-    &-specifyYour{
+    &-specifyYour {
       margin-left: 0;
       width: 40%;
     }
 
-    &-continueButton{
+    &-continueButton {
       margin: 0 0 5%;
       padding: 0.8rem 1%;
       width: 20%;

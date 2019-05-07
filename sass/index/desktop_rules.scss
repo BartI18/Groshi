@@ -6,8 +6,15 @@
     display: none;
   }
 
+  &-icon{
+    padding-left: 0;
+  }
+
+  &-link{
+    margin-left: 10%;
+  }
+
   &Block{
-    padding-left: 10%;
     justify-content: normal;
   }
 }
