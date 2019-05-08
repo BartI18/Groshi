@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans.woff2") format("woff2"), url("../../src/fonts/open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans-bold.woff2") format("woff2"), url("../../src/fonts/open-sans-bold.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif;
+}
+
+.buttonType {
+  margin: 5% auto;
+  padding: 0.8rem 1rem;
+  width: max-content;
+  display: block;
+}
+
+.Header-link {
+  margin-left: 10%;
+}
+
+.Header-icon {
+  padding-left: 0;
+}
+
+.ArticleHowDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ArticleFAQ-separator {
+  display: none;
+}
+
+.ArticleFAQ-definition {
+  padding: 0 1.5rem 1rem;
+}
+
+.ArticleQuick-pictureMoney {
+  display: flex;
+  justify-content: center;
+}
+
+.ArticleQuick-imgMoney {
+  padding: 5% 0;
+}
+
+.SectionStepsSection {
+  padding: 1rem 1.2rem 10% 1.2rem;
+}
+
+.Passport {
+  padding-bottom: 20%;
+}
+
+.SFirstContainer {
+  padding: 0 15%;
+}
+
+.SFirst-inputTelNumber {
+  display: block;
+}
+
+.SFirst-inputSubmit {
+  width: 90%;
+  width: -webkit-fill-available;
+  margin: 5% 1.5rem 5% 0;
+}

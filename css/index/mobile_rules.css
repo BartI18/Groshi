@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans.woff2") format("woff2"), url("../../src/fonts/open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans-bold.woff2") format("woff2"), url("../../src/fonts/open-sans-bold.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif;
+}
+
+.PassportMain {
+  padding-left: 1.5rem;
+}
+
+.PassportIframe {
+  display: none;
+}
+
+.Passport-header {
+  margin: 0;
+  padding-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.Passport-step {
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.Passport-divBar {
+  margin: 1rem 0.5rem 1rem 0;
+}
+
+.Passport-bar {
+  margin: 0;
+  height: 2px;
+  border: none;
+  background: #40ff00;
+}
+
+.Passport-bar--40 {
+  width: 40%;
+}
+
+.Passport-bar--60 {
+  width: 60%;
+}
+
+.Passport-bar--80 {
+  width: 80%;
+}
+
+.Passport-bar--100 {
+  width: 100%;
+}
+
+.Passport-percent {
+  padding-left: 0.5rem;
+  color: #424242;
+}
+
+.Passport-progress {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.PassportDl {
+  padding-top: 2rem;
+  color: #424242;
+  margin: 0;
+}
+
+.PassportDl-dt {
+  font-size: 1.1rem;
+}
+
+.PassportDl-dt-padding {
+  padding: 1rem 0;
+}
+
+.PassportDl-dd {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.Passport-button {
+  font-family: "Open Sans Bold", serif;
+  color: #454545;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px #d1d1d1 solid;
+  text-align: center;
+}
+
+.Passport-button--data {
+  padding: 2rem 0;
+}
+
+.Passport-button--back {
+  padding: 1.2rem 0 1.5rem 0;
+}
+
+.Passport-button--information {
+  padding: 1.2rem 0 1.5rem 0;
+}
+
+.Passport-button--credit {
+  margin-top: 4rem;
+  padding: 1.2rem 0 1.5rem 0;
+  border-top: 1px #d1d1d1 solid;
+}
+
+.PassportSection {
+  border-bottom: 1px #d1d1d1 solid;
+  background-clip: padding-box;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+.PassportSection-h4 {
+  font-size: 0.9rem;
+  color: #424242;
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: 1px #d1d1d1 solid;
+}
+
+.PassportSection-p {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 1rem 0;
+  color: #545454;
+}
+
+.PassportSection--grey {
+  background-color: #fbfbfb;
+}
+
+.PassportSectionFirst {
+  background-color: #fbfbfb;
+  margin-bottom: 4.5rem;
+}
+
+.PassportSectionFirst-paragraph {
+  color: #424242;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-bottom: 1px #d1d1d1 Solid;
+}
+
+.Passport-paragr {
+  margin: 0;
+  padding: 1.2rem 0.5rem 1.2rem 1.5rem;
+  background-clip: padding-box;
+  color: #424242;
+  font-size: 0.9rem;
+  border-bottom: 1px #d1d1d1 solid;
+}
+
+.Passport-consumer {
+  font-family: "Open Sans Bold", serif;
+}
+
+.Passport-labelCheck {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.Passport-buttonHideAll {
+  color: #424242;
+  width: 100%;
+  display: block;
+  background-color: #f0f0f0;
+  margin-bottom: 3.5rem;
+  padding: 0.8rem 0;
+  border: none;
+}
+
+.Passport-buttonContinue {
+  margin: 3.5rem 1rem 5rem 1.5rem;
+}
+
+.Passport-hide {
+  display: none;
+}
+
+.Passport-errorText {
+  color: #f00;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.PassportSectionBorrower {
+  padding-left: 1.5rem;
+}
+
+.PassportSectionBorrower-h2 {
+  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #4a4a4a;
+}
+
+.PassportSectionBorrower-h3 {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #424242;
+}
+
+.PassportSectionBorrower-p {
+  margin: 0;
+  padding: 0 1rem 0.5rem 0;
+  color: #424242;
+  font-size: 0.7rem;
+}
+
+.PassportSectionBorrower-p--banking {
+  padding-bottom: 3.5rem;
+}

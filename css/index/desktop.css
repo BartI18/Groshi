@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans.woff2") format("woff2"), url("../../src/fonts/open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans-bold.woff2") format("woff2"), url("../../src/fonts/open-sans-bold.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif;
+}
+
+.ArticleReasons-h2 {
+  padding: 7rem 0 6rem;
+  font-size: 3rem;
+}
+
+.ArticleReasonsUpContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.ArticleReasonsContainer {
+  top: -2rem;
+}
+
+.ArticleReasons-border {
+  width: auto;
+}
+
+.ArticleReasons-h3 {
+  padding: 5rem 7rem 0 7rem;
+  font-size: 1.5rem;
+}
+
+.ArticleReasons-choose {
+  margin: 7.5rem auto 9rem auto;
+}
+
+.ArticleReasonsUL {
+  list-style: none;
+}
+
+.ArticleReasonsUL-li {
+  font-size: 1.2rem;
+}
+
+.ArticleFAQ-h2 {
+  padding: 6.5rem 0 1.5rem;
+  font-size: 3rem;
+}
+
+.ArticleFAQ-separator {
+  display: none;
+}
+
+.ArticleFAQContainer {
+  margin: 5rem 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10rem 12rem;
+}
+
+.ArticleFAQContainer--1 {
+  grid-column-start: 1;
+}
+
+.ArticleFAQContainer--2 {
+  grid-column-start: 2;
+}
+
+.ArticleFAQContainer--3 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.ArticleFAQContainer--4 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.ArticleFAQContainer--5 {
+  grid-column-start: 2;
+}
+
+.ArticleFAQContainer--6 {
+  grid-column-start: 3;
+}
+
+.ArticleQuick-h2 {
+  padding: 7rem 0 1.5rem;
+  font-size: 3rem;
+}
+
+.ArticleQuick-subH2 {
+  padding: 0 30%;
+  font-size: 1.1rem;
+}
+
+.ArticleQuick-h4 {
+  font-size: 1.5rem;
+}
+
+.ArticleQuick-markP {
+  padding-top: 1rem;
+  display: block;
+  background: none;
+}
+
+.ArticleQuickContainer {
+  padding: 0 10%;
+  display: flex;
+}
+
+.ArticleQuickSubContainer {
+  padding-top: 10rem;
+}
+
+.ArticleQuick-imgMoney {
+  margin-left: -14rem;
+}
+
+.ArticleQuick-p--down {
+  display: none;
+}
+
+.SectionSteps {
+  padding: 5rem 10% 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-gap: 5rem;
+  background-color: #f9fafc50;
+}
+
+.ArticleMaxQuick {
+  display: block;
+}
+
+.ArticleMaxQuick-h2 {
+  margin: 0;
+  padding: 4rem 0 5rem;
+  font-size: 3rem;
+  font-weight: normal;
+  text-align: center;
+  color: #152844;
+}
+
+.ArticleMaxQuick-strongH2 {
+  font-family: "Open Sans Bold", serif;
+}
+
+.ArticleMaxQuick-imgSend {
+  margin: 0 auto;
+  display: flex;
+}
+
+.ArticleMaxQuickContainer {
+  margin: 4.5rem 0 6.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ArticleMaxQuickContainer-p {
+  margin: 0 1.5rem;
+  width: 20%;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.ArticleMaxQuick-linkChooseAgreement {
+  text-decoration: none;
+}
+
+.Footer {
+  position: relative;
+  padding-left: 7rem;
+}
+
+.Footer-h2 {
+  padding: 3rem 1.2rem 0;
+}
+
+.FooterUL {
+  display: flex;
+  position: absolute;
+  top: 1.5rem;
+  right: 10rem;
+  width: auto;
+}
+
+.FooterUL-li {
+  background: none;
+  width: 100px;
+}
+
+.FooterUL-li--7 {
+  display: none;
+}
+
+.FooterUL-link {
+  color: #fff;
+}
+
+.FooterUL-link:active {
+  color: #d8f939;
+}
+
+.Footer-markBlock {
+  display: inline;
+}
+
+.Footer-p {
+  padding: 1.5rem 0.5rem 0 1.2rem;
+}
+
+.Footer-p--down {
+  padding: 0 2rem 3.5rem 1.2rem;
+}
+
+.FooterFb {
+  padding: 0;
+  position: absolute;
+  bottom: 3rem;
+  right: 10rem;
+  background: none;
+}

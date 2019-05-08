@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans.woff2") format("woff2"), url("../../src/fonts/open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-display: fallback;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans-bold.woff2") format("woff2"), url("../../src/fonts/open-sans-bold.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif;
+}
+
+.buttonType {
+  margin: 7rem auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  width: max-content;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.Header {
+  display: block;
+}
+
+.HeaderBlock {
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.HeaderUL {
+  display: flex;
+  width: auto;
+}
+
+.HeaderUL-listItem {
+  background: none !important;
+  font-size: 0.7rem;
+}
+
+.HeaderUL-listItem--removed {
+  display: none;
+}
+
+.HeaderUL-link {
+  color: #fff;
+}
+
+.HeaderUL-link:active {
+  color: #d8f939;
+}
+
+.Header-hamburger {
+  display: none;
+}
+
+.Header-hamburgerIcon {
+  display: none;
+}
+
+.SFirstContainer {
+  margin-top: 5%;
+  padding: 0 0 25% 7rem;
+  position: relative;
+}
+
+.SFirst-h1 {
+  font-size: 2rem;
+}
+
+.SFirst-h2 {
+  font-size: 3.5rem;
+}
+
+.SFirst-mark10minute {
+  display: inline;
+}
+
+.SFirst-paragraphChoose {
+  display: none;
+}
+
+.SFirst-inputSubmit {
+  margin: 0;
+}
+
+.SFirst-labelMonth--12 {
+  margin-bottom: 1.5rem;
+}
+
+.SFirstForm {
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: 10rem;
+  background: #fff;
+}
+
+.SFirst-labelTelNumber {
+  margin-bottom: 1.5rem;
+}
+
+.SFirst-inputTelNumber {
+  display: block;
+}
+
+.SFirst-parOTPPassword {
+  padding: 0.5rem 1rem 1.5rem 1rem;
+  width: 200px;
+}
+
+.ArticleHow-h2 {
+  padding-top: 9rem;
+  font-size: 3rem;
+}
+
+.ArticleHow-paragraph {
+  font-size: 1.1rem;
+  color: #849eb0;
+}
+
+.ArticleHow-imgMoney {
+  width: auto;
+}
+
+.ArticleHowDiv {
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+}
+
+.ArticleHowUL {
+  padding-left: 10%;
+}
+
+.ArticleHowUL-lItem {
+  font-size: 1.2rem;
+}
