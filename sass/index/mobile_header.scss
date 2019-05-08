@@ -112,6 +112,10 @@
     color: $white;
   }
 
+  &RangeContainer{
+    display: none;
+  }
+
   &-h2{
     font-size: 2.5rem;
     font-family: "Open Sans Bold", serif;
@@ -198,7 +202,7 @@
   }
 
   &-inputTelNumber{
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     font-size: 1.1rem;
     border: none;
     border-bottom: 1px $grey solid;

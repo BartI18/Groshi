@@ -3,8 +3,8 @@ import {Const} from './consts.mjs';
 
 let paragraphError = document.querySelector(".SFirst-paragraphError");
 let inputAmount = document.querySelector(".SFirst-inputCount");
-let label24 = document.querySelector("#SFirst-labelMonth24");
-let label12 = document.querySelector("#SFirst-labelMonth12");
+let label24 = document.querySelectorAll(".SFirst-labelMonth--24");
+let label12 = document.querySelectorAll(".SFirst-labelMonth--12");
 let submitBtn = document.querySelector(".SFirst-inputSubmit");
 let inputTel = document.querySelector(".SFirst-inputTelNumber");
 let isValidAmount = false;
@@ -33,10 +33,16 @@ function getTelValue(value) {
 }
 
 function checked24Btn() {
-    if (!label24.classList.contains("SFirst-labelMonth--active")) {
-        label24.classList.add("SFirst-labelMonth--active");
-        label12.classList.remove("SFirst-labelMonth--active");
+    if (!label24[0].classList.contains("SFirst-labelMonth--active")) {
+        label24[0].classList.add("SFirst-labelMonth--active");
+        label24[1].classList.add("SFirst-labelMonth--active");
+        label12[0].classList.remove("SFirst-labelMonth--active");
+        label12[1].classList.remove("SFirst-labelMonth--active");
     }
+}
+
+function checked12Btn() {
+
 }
 
 eventL();
@@ -66,7 +72,6 @@ inputTel.onkeyup = (e) => {
         submitBtn.setAttribute("disabled", "true") : submitBtn.removeAttribute("disabled");
 };
 
-
 submitBtn.onclick = (e) => {
     if (submitBtn.textContent !== "ПРОДОВЖИТИ") {
         if (isValidNumber(getTelValue(inputTel.value)) && isValidAmount) {
@@ -87,13 +92,21 @@ submitBtn.onclick = (e) => {
     e.preventDefault();
 };
 
-document.querySelector(".SFirst-inputMonth12").onchange = () => {
-    if (!label12.classList.contains("SFirst-labelMonth--active")) {
-        label12.classList.add("SFirst-labelMonth--active");
-        label24.classList.remove("SFirst-labelMonth--active");
+document.querySelectorAll(".SFirst-inputMonth12").forEach((value) => value.onchange = () => {
+    if (!label12[0].classList.contains("SFirst-labelMonth--active")) {
+        label12[0].classList.add("SFirst-labelMonth--active");
+        label12[1].classList.add("SFirst-labelMonth--active");
+        label24[0].classList.remove("SFirst-labelMonth--active");
+        label24[1].classList.remove("SFirst-labelMonth--active");
     }
+});
+document.querySelectorAll(".SFirst-inputMonth24").forEach((value) => value.onchange = checked24Btn);
+
+let range = document.querySelector(".SFirst-inputRange");
+range.oninput = () => {
+    inputAmount.value = range.value;
+    checkAmount(range.value);
 };
-document.querySelector(".SFirst-inputMonth24").onchange = checked24Btn;
 
 function checkAmount(currentValue) {
     if (currentValue >= Const.MINIMAL_VALUE && currentValue <= Const.MAX_VALUE) {

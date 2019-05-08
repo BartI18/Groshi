@@ -4,6 +4,17 @@
   padding: 0 0 30% 1rem;
 }
 
+.Header{
+
+  &-link{
+    margin-left: 1rem;
+  }
+
+  &UL{
+    margin-right: 1rem;
+  }
+}
+
 .SFirst{
 
   &Form{

@@ -2,7 +2,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-display: fallback;
+  font-display: swap;
   src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans.woff2") format("woff2"), url("../../src/fonts/open-sans.woff") format("woff");
 }
 
@@ -10,7 +10,7 @@
   font-family: 'Open Sans Bold';
   font-style: normal;
   font-weight: 800;
-  font-display: fallback;
+  font-display: swap;
   src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../src/fonts/open-sans-bold.woff2") format("woff2"), url("../../src/fonts/open-sans-bold.woff") format("woff");
 }
 
@@ -37,14 +37,19 @@ body {
   display: block;
 }
 
+.Header-link {
+  margin-left: 10%;
+}
+
 .HeaderBlock {
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .HeaderUL {
   display: flex;
   width: auto;
+  margin-right: 10%;
 }
 
 .HeaderUL-listItem {
@@ -72,10 +77,51 @@ body {
   display: none;
 }
 
+input[type="range"] {
+  overflow: hidden;
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.21);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 1rem;
+  -webkit-appearance: none;
+  color: #13bba4;
+  margin-top: -1px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 1rem;
+  -webkit-appearance: none;
+  height: 1rem;
+  cursor: ew-resize;
+  background: #fff;
+  box-shadow: -750px 0 0 750px #fff;
+}
+
 .SFirstContainer {
   margin-top: 5%;
-  padding: 0 0 25% 7rem;
+  padding: 0 0 25% 10%;
   position: relative;
+}
+
+.SFirstRangeSubContainer {
+  margin: 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.SFirstRangeSubContainer-amountMoney {
+  width: 3%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.SFirstRangeContainer {
+  margin: 5% 0 0;
+  display: block;
+  width: 50%;
 }
 
 .SFirst-h1 {
@@ -102,11 +148,20 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.SFirst-labelMonth--desktop {
+  display: inline;
+  font-size: 1.4rem;
+}
+
+.SFirst-labelMonth--desktopRight {
+  margin-left: 10%;
+}
+
 .SFirstForm {
   padding: 2rem;
   position: absolute;
   top: 0;
-  right: 10rem;
+  right: 10%;
   background: #fff;
 }
 

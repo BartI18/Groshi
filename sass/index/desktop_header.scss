@@ -16,14 +16,19 @@ body{
 .Header{
   display: block;
 
+  &-link{
+    margin-left: 10%;
+  }
+
   &Block{
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   &UL{
     display: flex;
     width: auto;
+    margin-right: 10%;
 
     &-listItem{
       background: none !important;
@@ -53,12 +58,54 @@ body{
 
 }
 
+input[type="range"]{
+  overflow: hidden;
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.21);
+
+  &::-webkit-slider-runnable-track {
+    height: 1rem;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 1rem;
+    -webkit-appearance: none;
+    height: 1rem;
+    cursor: ew-resize;
+    background: #fff;
+    box-shadow: -750px 0 0 750px #fff;
+  }
+}
+
 .SFirst{
 
   &Container{
     margin-top: 5%;
-    padding: 0 0 25% 7rem;
+    padding: 0 0 25% 10%;
     position: relative;
+  }
+
+  &RangeSubContainer{
+    margin: 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+
+    &-amountMoney{
+      width: 3%;
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+
+  &RangeContainer{
+    margin: 5% 0 0;
+    display: block;
+    width: 50%;
+
   }
 
   &-h1{
@@ -85,11 +132,21 @@ body{
     margin-bottom: 1.5rem;
   }
 
+  &-labelMonth--desktop{
+    display: inline;
+    font-size: 1.4rem;
+
+    &Right{
+      margin-left: 10%;
+    }
+  }
+
+
   &Form{
     padding: 2rem;
     position: absolute;
     top: 0;
-    right: 10rem;
+    right: 10%;
     background: #fff;
   }
 
