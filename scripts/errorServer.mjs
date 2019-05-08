@@ -1,8 +1,7 @@
 import loading from './loading.mjs';
-
+import {Const} from './consts.mjs';
 export default function errorServer() {
-
-    fetch("../json/error.json").then((ful) => {
+    fetch(Const.PATH_ERROR).then((ful) => {
         ful.json().then((res) => {
             document.querySelector(".Passport").remove();
             let section = `<main class="Passport Passport--padding10">
@@ -15,8 +14,8 @@ export default function errorServer() {
                 <section class="PassportFinal">
             <h2 class="PassportFinal-h2">${res.wrong}</h2>
             <picture class="PassportFinal-picture">
-                    <source srcset="../src/images/error/group_mobile.webp" type="image/webp">
-                    <img class="PassportFinal-checkImg" src="../src/images/error/group_mobile.png" alt="error image">
+                    <source srcset="./src/images/error/group_mobile.webp" type="image/webp">
+                    <img class="PassportFinal-checkImg" src="./src/images/error/group_mobile.png" alt="error image">
                 </picture>
             <div class="PassportFinal-container">
                 <div class="PassportFinal-exclamation">!</div>

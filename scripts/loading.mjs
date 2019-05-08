@@ -1,18 +1,15 @@
 import success from "./success.mjs";
 import errorS from "./errorServer.mjs";
-
+import {Const} from './consts.mjs';
 export default function loading() {
-
-    fetch("../json/loading.json").then((ful) => {
+    fetch(Const.PATH_LOADING).then((ful) => {
         ful.json().then((json) => {
             document.querySelector(".Passport").remove();
-            if (!document.querySelector(".confirmation_css")) {
+            if (!document.querySelector(".confirmation_css"))
                 document.head.insertAdjacentHTML("beforeend",
-                    `<link class="confirmation_css" rel="stylesheet" href="../css/index/mobile_confirmation.css">`);
-                document.head.insertAdjacentHTML("beforeend",
-                    `<link class="confirmation_css2" rel="stylesheet" 
-                            media="screen and (max-width: 1920px) and (min-width: 426px)" href="../css/index/desktop_confirmation.css">`);
-            }
+                    `<link class="confirmation_css" rel="stylesheet" href="./css/index/mobile_confirmation.css">
+                           <link class="confirmation_css2" rel="stylesheet" 
+                               media="screen and (max-width: 1920px) and (min-width: 426px)" href="./css/index/desktop_confirmation.css">`);
 
             let main = ` <main class="Passport">
                     <section class="PassportMain"><h2 class="Passport-header">${json.header}</h2>
@@ -27,9 +24,7 @@ export default function loading() {
             document.querySelector(".Header").insertAdjacentHTML("afterend", main);
             window.scrollTo(0, 0);
 
-            setTimeout(() => {
-                (Math.trunc(Math.random() * 2)) ? success() : errorS();
-            }, 1500);
+            setTimeout(() => (Math.trunc(Math.random() * 2)) ? success() : errorS(), 1500);
         });
     });
 

@@ -1,11 +1,10 @@
 import loading from './loading.mjs'
+import {Const} from './consts.mjs';
 
 export default function borrowerRequest() {
-
-    fetch("../json/borrower.json").then((res) => {
+    fetch(Const.PATH_BORROWER).then((res) => {
         res.json().then((res) => {
             document.querySelector(".Passport").remove();
-
             let section = `<main class="Passport">
                  <section class="PassportMain">
                 <h2 class="Passport-header">${res.rules_credit}</h2>
@@ -31,11 +30,9 @@ export default function borrowerRequest() {
                 let errorParagraph = document.querySelector(".Passport-errorText");
                 if (document.querySelector(".Passport-inputCheck").checked) {
                     errorParagraph.textContent = "";
-
                     loading();
-                } else {
+                } else
                     errorParagraph.textContent = "Согласитесь с условиями";
-                }
             };
         })
     })

@@ -1,8 +1,8 @@
 import emailSend from './emailSend.mjs';
+import {Const} from './consts.mjs';
 
 export default function success() {
-
-    fetch("../json/success.json").then((ful) => {
+  fetch(Const.PATH_SUCCESS).then((ful) => {
         ful.json().then((res) => {
             document.querySelector(".Passport").remove();
             let section = `<main class="Passport Passport--padding0">
@@ -14,7 +14,7 @@ export default function success() {
                         <strong class="Passport-percent">${res.percent}</strong></p></section>
                 <section class="PassportFinal">
                     <h2 class="PassportFinal-h2">${res.application_created}</h2>
-                    <img class="PassportFinal-checkImg" src="../src/images/ok.svg" alt="">
+                    <img class="PassportFinal-checkImg" src="./src/images/ok.svg" alt="">
                     <div class="PassportFinal-container">
                         <div class="PassportFinal-exclamation">!</div>
                     <p class="PassportFinal-client">${res.client}</p></div>

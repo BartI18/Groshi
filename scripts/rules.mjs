@@ -1,47 +1,38 @@
 import borrower from './borrowerRequest.mjs';
+import {Const} from './consts.mjs';
 
 export default function rules() {
+    fetch(Const.PATH_RULES).then((ful) => {
+        ful.json().then((responseJSON) => {
+            repaint(responseJSON);
+            let buttonHideAll = document.querySelector(".Passport-buttonHideAll");
+            document.querySelector(".Passport-button--credit").onclick = () => onClick(".PassportProcedure");
+            document.querySelector(".Passport-button--information").onclick = () => onClick(".PassportInfo");
 
-    fetch("../json/rules.json").then( (ful) => {
-        ful.json().then((resp) => appendData(resp));
+            buttonHideAll.onclick = () => {
+                let divPassword = document.querySelector(".PassportDiv");
+                if (!divPassword.classList.contains("Passport-hide")) {
+                    divPassword.classList.add("Passport-hide");
+                    buttonHideAll.textContent = "Раскрыть всё";
+                } else {
+                    divPassword.classList.remove("Passport-hide");
+                    buttonHideAll.textContent = "Свернуть всё";
+                }
+            };
+
+            document.querySelector(".Passport-buttonContinue").onclick = () => {
+                let errorParagraph = document.querySelector(".Passport-errorText");
+                if (document.querySelector(".Passport-inputCheck").checked) {
+                    //errorParagraph.textContent = "";
+                    borrower();
+                } else errorParagraph.textContent = "Согласитесь с условиями";
+            };
+        });
     });
 
-    function appendData(responseJSON) {
-        repaint(responseJSON);
-
-        let buttonContinue = document.querySelector(".Passport-buttonContinue");
-        let buttonHideAll = document.querySelector(".Passport-buttonHideAll");
-
-        document.querySelector(".Passport-button--credit").onclick = () => onClick(".PassportProcedure");
-        document.querySelector(".Passport-button--information").onclick = () => onClick(".PassportInfo");
-
-        buttonHideAll.onclick = () => {
-            let divPassword = document.querySelector(".PassportDiv");
-            if (!divPassword.classList.contains("Passport-hide")) {
-                divPassword.classList.add("Passport-hide");
-                buttonHideAll.textContent = "Раскрыть всё";
-            } else {
-                divPassword.classList.remove("Passport-hide");
-                buttonHideAll.textContent = "Свернуть всё";
-            }
-        };
-
-        buttonContinue.onclick = () => {
-            let inputCheck = document.querySelector(".Passport-inputCheck");
-            let errorParagraph = document.querySelector(".Passport-errorText");
-            if (inputCheck.checked) {
-                errorParagraph.textContent = "";
-                borrower();
-            } else errorParagraph.textContent = "Согласитесь с условиями";
-        };
-    }
-
     function onClick(name) {
-        let div = document.querySelector(name);
-        if (div.classList.contains("Passport-hide"))
-            div.classList.remove("Passport-hide");
-        else
-            div.classList.add("Passport-hide");
+        let divList = document.querySelector(name).classList;
+        (divList.contains("Passport-hide")) ? divList.remove("Passport-hide") : divList.add("Passport-hide");
     }
 
     /**
@@ -49,9 +40,9 @@ export default function rules() {
      * @param responseJSON json text from server
      */
     function repaint(responseJSON) {
-        document.head.insertAdjacentHTML("beforeend",`<link rel="stylesheet" href="../css/index/mobile_rules.css">`);
+        document.head.insertAdjacentHTML("beforeend", `<link rel="stylesheet" href="./css/index/mobile_rules.css">`);
         document.head.insertAdjacentHTML("beforeend", `<link rel="stylesheet" 
-            media="screen and (max-width: 1920px) and (min-width: 426px)" href="../css/index/desktop_rules.css">`);
+            media="screen and (max-width: 1920px) and (min-width: 426px)" href="./css/index/desktop_rules.css">`);
 
         document.querySelector(".SFirstContainer").remove();
         document.querySelector(".Main").remove();

@@ -1,6 +1,6 @@
+import {Const} from './consts.mjs';
 export default function email() {
-
-    fetch("../json/email.json").then((res) => {
+    fetch(Const.PATH_EMAIL).then((res) => {
         return res.json().then((res) => {
             document.querySelector(".Passport").remove();
             let main = `<main class="Passport Passport--padding0">
@@ -13,18 +13,17 @@ export default function email() {
         <section class="PassportEmail">
             <h2  class="PassportEmail-specifyYour">${res.specify_your}</h2>
             <picture class="PassportEmail-picture">
-                <source srcset="../src/images/email/page_mobile.webp" type="image/webp">
-                <img class="PassportEmail-emailImg" src="../src/images/email/page_mobile.png" alt="error image">
+                <source srcset="./src/images/email/page_mobile.webp" type="image/webp">
+                <img class="PassportEmail-emailImg" src="./src/images/email/page_mobile.png" alt="error image">
             </picture>
             <input class="PassportEmail-input" placeholder="email">
             <p class="PassportEmail-subscribe">${res.subscribe}</p>
             <button class="PassportEmail-continueButton buttonType">${res.send}</button></section>`;
-
             document.querySelector(".Header").insertAdjacentHTML("afterend", main);
 
             document.querySelector(".PassportEmail-continueButton").onclick = () => {
-                document.querySelector(".PassportEmail-subscribe").textContent = "На цей email буде вiдправлен результат";
-                setInterval(() => location.href = "index.html", 1000);
+                document.querySelector(".PassportEmail-subscribe").textContent = res.email_result;
+                setInterval(() => location.href = Const.HOME_PAGE, 1000);
             }
         })
     });
