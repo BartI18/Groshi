@@ -13,5 +13,5 @@ export let Const = {
     PATH_LOADING : "./json/loading.json",
     PATH_RULES : "./json/rules.json",
     PATH_SUCCESS : "./json/success.json",
-    HOME_PAGE : "index.html"
+    HOME_PAGE : "/"
 };
