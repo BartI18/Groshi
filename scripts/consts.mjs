@@ -9,9 +9,9 @@ export let Const = {
     LENGTH_PHONE_NUMBER: 14,
     PATH_BORROWER: "./json/borrower.json",
     PATH_EMAIL: "./json/email.json",
-    PATH_ERROR : "./json/error.json",
-    PATH_LOADING : "./json/loading.json",
-    PATH_RULES : "./json/rules.json",
-    PATH_SUCCESS : "./json/success.json",
-    HOME_PAGE : "index.html"
+    PATH_ERROR: "./json/error.json",
+    PATH_LOADING: "./json/loading.json",
+    PATH_RULES: "./json/rules.json",
+    PATH_SUCCESS: "./json/success.json",
+    HOME_PAGE: "index.html"
 };

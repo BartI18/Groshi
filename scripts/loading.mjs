@@ -1,5 +1,3 @@
-import success from "./success.mjs";
-import errorS from "./errorServer.mjs";
 import {Const} from './consts.mjs';
 export default function loading() {
     fetch(Const.PATH_LOADING).then((ful) => {
@@ -24,7 +22,8 @@ export default function loading() {
             document.querySelector(".Header").insertAdjacentHTML("afterend", main);
             window.scrollTo(0, 0);
 
-            setTimeout(() => (Math.trunc(Math.random() * 2)) ? success() : errorS(), 1500);
+            setTimeout(() => (Math.trunc(Math.random() * 2)) ? import('./success.mjs').then((success) =>success.default())
+                : import('./errorServer.mjs').then((errorServer) => errorServer.default()), 1500);
         });
     });
 

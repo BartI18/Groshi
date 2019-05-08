@@ -1,8 +1,7 @@
-import emailSend from './emailSend.mjs';
 import {Const} from './consts.mjs';
 
 export default function success() {
-  fetch(Const.PATH_SUCCESS).then((ful) => {
+    fetch(Const.PATH_SUCCESS).then((ful) => {
         ful.json().then((res) => {
             document.querySelector(".Passport").remove();
             let section = `<main class="Passport Passport--padding0">
@@ -23,7 +22,8 @@ export default function success() {
                     <button class="PassportFinal-button PassportFinal-button--email">${res.email}</button></section>`;
 
             document.querySelector(".Header").insertAdjacentHTML("afterend", section);
-            document.querySelector(".PassportFinal-button--email").onclick = () => emailSend();
+            document.querySelector(".PassportFinal-button--email").onclick =
+                () => import('./emailSend.mjs').then(send => send.default());
         });
     });
 

@@ -1,5 +1,5 @@
-import loading from './loading.mjs';
 import {Const} from './consts.mjs';
+
 export default function errorServer() {
     fetch(Const.PATH_ERROR).then((ful) => {
         ful.json().then((res) => {
@@ -23,7 +23,8 @@ export default function errorServer() {
             <button class="PassportFinal-button PassportFinal-button--retry">${res.Retry}</button></section>`;
 
             document.querySelector(".Header").insertAdjacentHTML("afterend", section);
-            document.querySelector(".PassportFinal-button--retry").onclick = () => loading();
+            document.querySelector(".PassportFinal-button--retry").onclick =
+                () => import('./loading.mjs').then((loading) => loading.default());
         });
     });
 

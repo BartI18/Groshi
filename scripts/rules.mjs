@@ -1,4 +1,3 @@
-import borrower from './borrowerRequest.mjs';
 import {Const} from './consts.mjs';
 
 export default function rules() {
@@ -22,10 +21,9 @@ export default function rules() {
 
             document.querySelector(".Passport-buttonContinue").onclick = () => {
                 let errorParagraph = document.querySelector(".Passport-errorText");
-                if (document.querySelector(".Passport-inputCheck").checked) {
-                    //errorParagraph.textContent = "";
-                    borrower();
-                } else errorParagraph.textContent = "Согласитесь с условиями";
+                if (document.querySelector(".Passport-inputCheck").checked)
+                    import('./borrowerRequest.mjs').then(borrower => borrower.default());
+                else errorParagraph.textContent = "Согласитесь с условиями";
             };
         });
     });

@@ -1,4 +1,3 @@
-import loading from './loading.mjs'
 import {Const} from './consts.mjs';
 
 export default function borrowerRequest() {
@@ -30,7 +29,7 @@ export default function borrowerRequest() {
                 let errorParagraph = document.querySelector(".Passport-errorText");
                 if (document.querySelector(".Passport-inputCheck").checked) {
                     errorParagraph.textContent = "";
-                    loading();
+                    import('./loading.mjs').then((loading) => loading.default());
                 } else
                     errorParagraph.textContent = "Согласитесь с условиями";
             };

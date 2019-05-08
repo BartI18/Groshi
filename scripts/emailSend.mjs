@@ -1,4 +1,5 @@
 import {Const} from './consts.mjs';
+
 export default function email() {
     fetch(Const.PATH_EMAIL).then((res) => {
         return res.json().then((res) => {

@@ -1,4 +1,3 @@
-import rules from './rules.mjs';
 import {Const} from './consts.mjs';
 
 let paragraphError = document.querySelector(".SFirst-paragraphError");
@@ -39,10 +38,6 @@ function checked24Btn() {
         label12[0].classList.remove("SFirst-labelMonth--active");
         label12[1].classList.remove("SFirst-labelMonth--active");
     }
-}
-
-function checked12Btn() {
-
 }
 
 eventL();
@@ -87,7 +82,8 @@ submitBtn.onclick = (e) => {
         if (document.querySelector(".SFirst-inputPassword").value.length !== Const.LENGTH_PASS)
             setTextColorMsg('Неверная длинна пароля', '#f00');
         else
-            rules();
+            import('./rules.mjs').then((rules) => rules.default());
+
     }
     e.preventDefault();
 };
