@@ -24,6 +24,10 @@ body {
   scroll-behavior: auto;
 }
 
+figure {
+  margin: 0;
+}
+
 .buttonType {
   border-radius: 3.2px;
   border: none;
